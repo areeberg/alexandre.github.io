@@ -1,0 +1,13 @@
+<header class="cabecalho">
+  <div class="pagina">
+    <a class="marca" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="nav" aria-label="Principal">
+      <a class="ka-buzio{% if page.url == '/' %} ka-buzio--ativo{% endif %}" href="{{ '/' | relative_url }}">Início</a>
+      <a class="ka-buzio{% if page.url contains '/sobre' %} ka-buzio--ativo{% endif %}" href="{{ '/sobre/' | relative_url }}">Sobre</a>
+      <a class="ka-buzio{% if page.url contains '/blog' or page.layout == 'post' %} ka-buzio--ativo{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a class="ka-buzio{% if page.url contains '/agenda' %} ka-buzio--ativo{% endif %}" href="{{ '/agenda/' | relative_url }}">Agenda</a>
+      <button id="tema" class="tema" type="button" aria-label="Alternar tema claro e escuro">Tema</button>
+      <a class="ka-botao ka-botao--domingo" href="{{ '/sobre/#contato' | relative_url }}">Contato</a>
+    </nav>
+  </div>
+</header>
