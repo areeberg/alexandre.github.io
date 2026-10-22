@@ -1,0 +1,31 @@
+# Rótulos da interface por idioma. A chave de cada página é o "ref" do front matter.
+en:
+  nav:
+    home: Home
+    consulting: Consulting
+    research: Research
+    talks: Talks
+    about: About
+  contact: Contact
+  theme: Theme
+  skip: Skip to content
+  switch_label: Português
+  switch_short: PT
+  footer_note: AI strategy, governance and research
+  upcoming: Upcoming
+  delivered: Delivered
+pt:
+  nav:
+    home: Início
+    consulting: Consultoria
+    research: Pesquisa
+    talks: Palestras
+    about: Sobre
+  contact: Contato
+  theme: Tema
+  skip: Pular para o conteúdo
+  switch_label: English
+  switch_short: EN
+  footer_note: estratégia, governança e pesquisa em IA
+  upcoming: Em breve
+  delivered: Realizada

@@ -1,0 +1,25 @@
+# Fonte: perfil do LinkedIn (PDF) e documento "Biography".
+- org: Starian
+  period: 2026 –
+  en: { role: AI Corporate Manager, text: "Leads AI lifecycle governance, regulatory compliance and the adoption of AI across engineering teams." }
+  pt: { role: Gerente Corporativo de IA, text: "Lidera a governança do ciclo de vida da IA, a conformidade regulatória e a adoção de IA pelos times de engenharia." }
+- org: ARM Consulting
+  period: 2026 –
+  en: { role: Founder and AI Consultant, text: "Technical and scientific consulting for AI and data-driven innovation, including Fundação CERTI." }
+  pt: { role: Fundador e consultor de IA, text: "Consultoria técnica e científica em IA e inovação orientada a dados, incluindo a Fundação CERTI." }
+- org: Fundação CERTI
+  period: 2023 – 2026
+  en: { role: AI Coordinator, Head of AI Research, text: "Strategic planning, OKRs and IP for AI and data projects; recruited and developed the AI team from trainee to senior." }
+  pt: { role: Coordenador de IA, head de pesquisa em IA, text: "Planejamento estratégico, OKRs e propriedade intelectual em projetos de IA e dados; formou o time de IA de trainee a sênior." }
+- org: GPAI, Global Partnership on AI
+  period: 2021, 2024 – 2025
+  en: { role: AI Expert, text: "Future of Work working group (2021) and Data Governance working group, SAFE project (2024–2025)." }
+  pt: { role: Especialista em IA, text: "Grupo de trabalho Future of Work (2021) e grupo de Data Governance, projeto SAFE (2024–2025)." }
+- org: PSafe
+  period: 2021 – 2023
+  en: { role: Senior Data Scientist, text: "NLP for phishing, large-scale malware detection, concept-drift monitoring in production and explainable AI for new malware families." }
+  pt: { role: Cientista de dados sênior, text: "NLP para phishing, detecção de malware em larga escala, monitoramento de concept drift em produção e IA explicável para novas famílias de malware." }
+- org: Instituto SENAI de Inovação em Sistemas Embarcados
+  period: 2019 – 2021
+  en: { role: Research Lead, Computer Vision and Machine Learning, text: "Led researchers building computer vision, NLP and ML solutions for industry, with a focus on embedded systems." }
+  pt: { role: Líder de pesquisa em visão computacional e ML, text: "Coordenou pesquisadores no desenvolvimento de soluções de visão computacional, NLP e ML para a indústria, com foco em sistemas embarcados." }

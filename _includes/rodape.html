@@ -1,9 +1,20 @@
-<footer class="rodape">
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.ui[lang] -%}
+{%- assign l = site.data.links -%}
+<footer class="rodape" id="contato">
   <div class="pagina">
-    <div>
-      <p class="anotacao">feito à mão, um retalho por vez</p>
-      <p class="titulo-1">{{ site.title }}</p>
+    <div class="rodape__chamada">
+      <p class="anotacao">{% if lang == 'pt' %}vamos conversar{% else %}let's talk{% endif %}</p>
+      <p class="display">{{ t.contact }}</p>
+      <p class="rodape__texto">{% if lang == 'pt' %}Projetos de IA, governança, P&amp;D, palestras e workshops.{% else %}AI projects, governance, R&amp;D, talks and workshops.{% endif %}</p>
+      <a class="rodape__email" href="mailto:{{ l.email }}">{{ l.email }}</a>
     </div>
-    <p class="legenda">&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. Texto de exemplo para validação do design.</p>
+    <ul class="rodape__links">
+      <li><a href="{{ l.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></li>
+      <li><a href="{{ l.instagram }}" rel="me noopener" target="_blank">Instagram</a></li>
+      <li><a href="{{ l.scholar }}" rel="me noopener" target="_blank">Google Scholar</a></li>
+      <li><a href="{{ l.orcid }}" rel="me noopener" target="_blank">ORCID</a></li>
+    </ul>
+    <p class="legenda rodape__fim">&copy; {{ 'now' | date: '%Y' }} Alexandre Reeberg de Mello · ARM Consulting · {{ t.footer_note }}</p>
   </div>
 </footer>

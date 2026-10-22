@@ -1,0 +1,107 @@
+{%- assign lang = page.lang -%}
+<div class="pagina">
+  <section class="hero hero--curto">
+    <div class="hero__texto">
+      <p class="anotacao">ARM Consulting</p>
+      {% if lang == 'pt' %}
+      <h1 class="display">Consultoria em IA, do estratégico ao técnico.</h1>
+      <p>A ARM Consulting ajuda empresas a construir, avaliar e escalar projetos de Inteligência Artificial com rigor técnico e visão de negócio. Da estratégia ao time, da governança ao laboratório: projetos que evoluem de prova de conceito para produção, com governança, o time certo e o financiamento adequado.</p>
+      {% else %}
+      <h1 class="display">AI consulting, from strategy to code.</h1>
+      <p>ARM Consulting helps companies build, assess and scale Artificial Intelligence projects with technical rigour and business sense. From strategy to team, from governance to the lab: projects that move from proof of concept to production, with governance, the right team and the right funding.</p>
+      {% endif %}
+      <a class="ka-botao ka-botao--domingo" href="#contato">{% if lang == 'pt' %}Agendar uma conversa{% else %}Book a conversation{% endif %}</a>
+    </div>
+    <div class="hero__colagem hero__colagem--baixa" aria-hidden="true">
+      <div class="hero__laje"></div>
+      <div class="hero__cera ka-estampa-folha"></div>
+    </div>
+  </section>
+</div>
+
+<section class="faixa">
+  <div class="pagina">
+    <div class="cabeca-secao">
+      <p class="anotacao" style="color: var(--amarelo-cera)">{% if lang == 'pt' %}serviços{% else %}services{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}O que a ARM entrega{% else %}What ARM delivers{% endif %}</h2>
+    </div>
+    <ol class="servicos">
+      {%- for s in site.data.services %}
+      {%- assign sx = s[lang] %}
+      <li class="servico">
+        <span class="servico__num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+        <div class="servico__faixa ka-estampa-{{ s.estampa }}" aria-hidden="true"></div>
+        <h3 class="titulo-3">{{ sx.title }}</h3>
+        <p class="corpo-sm">{{ sx.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<div class="pagina">
+  <section class="secao duas-colunas">
+    <div>
+      <p class="anotacao">{% if lang == 'pt' %}credenciais{% else %}credentials{% endif %}</p>
+      <h2 class="titulo-1" style="margin-top: var(--esp-8)">{% if lang == 'pt' %}Dez anos de P&amp;D em IA aplicada{% else %}Ten years of applied AI R&amp;D{% endif %}</h2>
+    </div>
+    <ul class="lista-marcada">
+      {% if lang == 'pt' %}
+      <li><b>+20 empresas</b> atendidas e <b>+R$ 40 milhões</b> em projetos de P&amp;D executados.</li>
+      <li>Setores: energia elétrica, saúde, defesa, manufatura, agronegócio e máquinas agrícolas, SaaS, cibersegurança, jurídico e pós-venda.</li>
+      <li><b>5 produtos de cibersegurança</b> validados pelo AV-TEST.</li>
+      <li><b>3 patentes</b> em IA depositadas e concedidas em vários países.</li>
+      <li>Especialista em IA do <b>GPAI</b> (Global Partnership on AI) em 2021 e 2024–2025.</li>
+      <li>Ex-consultor especialista em IA e engenharia de dados no <b>Inovativa Brasil</b>.</li>
+      <li>Parcerias internacionais com ÉTS (Montreal), Halmstad University e Linköping University.</li>
+      {% else %}
+      <li><b>20+ companies</b> served and <b>R$ 40M+</b> in R&amp;D projects delivered.</li>
+      <li>Sectors: power and energy, healthcare, defence, manufacturing, agriculture and farm machinery, SaaS, cybersecurity, legal and after-sales.</li>
+      <li><b>5 cybersecurity products</b> validated by AV-TEST.</li>
+      <li><b>3 AI patents</b> filed and granted in several countries.</li>
+      <li>AI Expert at <b>GPAI</b> (Global Partnership on AI) in 2021 and 2024–2025.</li>
+      <li>Former AI and data engineering expert consultant at <b>Inovativa Brasil</b>.</li>
+      <li>International partnerships with ÉTS (Montreal), Halmstad University and Linköping University.</li>
+      {% endif %}
+    </ul>
+  </section>
+
+  <section class="secao" style="padding-top: 0">
+    <div class="cabeca-secao">
+      <p class="anotacao">{% if lang == 'pt' %}casos{% else %}cases{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}Com quem trabalhamos{% else %}Who we work with{% endif %}</h2>
+    </div>
+    <div class="casos">
+      <article class="caso caso--destaque">
+        <p class="rotulo">{% if lang == 'pt' %}Consultoria{% else %}Consulting{% endif %}</p>
+        <h3 class="titulo-1">Fundação CERTI</h3>
+        <p>{% if lang == 'pt' %}Escrita de projeto de P&amp;D, orientação científica, seleção técnica e formação do time de IA e engenharia de dados.{% else %}R&amp;D project writing, scientific guidance, technical hiring and building the AI and data engineering team.{% endif %}</p>
+        <a class="ka-link" href="https://certi.org.br/inteligencia-artificial/" target="_blank" rel="noopener">certi.org.br</a>
+      </article>
+      <article class="caso">
+        <p class="rotulo">Startup</p>
+        <h3 class="titulo-3">Dokbot</h3>
+        <a class="ka-link" href="https://www.dokbot.ai/" target="_blank" rel="noopener">dokbot.ai</a>
+      </article>
+      <article class="caso">
+        <p class="rotulo">Startup</p>
+        <h3 class="titulo-3">AprovaAI</h3>
+        <a class="ka-link" href="https://aprova.ai/" target="_blank" rel="noopener">aprova.ai</a>
+      </article>
+      <article class="caso">
+        <p class="rotulo">Startup</p>
+        <h3 class="titulo-3">IANA Tecnologia</h3>
+        <a class="ka-link" href="http://www.ianatecnologia.com.br/" target="_blank" rel="noopener">ianatecnologia.com.br</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="secao chamada" style="padding-top: 0">
+    {% if lang == 'pt' %}
+    <p class="titulo-1">Está construindo capacidade de IA internamente, avaliando um projeto de P&amp;D ou precisa de uma segunda opinião técnica?</p>
+    {% else %}
+    <p class="titulo-1">Building AI capability in-house, assessing an R&amp;D project, or need a technical second opinion?</p>
+    {% endif %}
+    <a class="ka-botao" href="mailto:{{ site.data.links.email }}?subject=ARM%20Consulting">{% if lang == 'pt' %}Escrever para a ARM{% else %}Write to ARM{% endif %}</a>
+  </section>
+</div>

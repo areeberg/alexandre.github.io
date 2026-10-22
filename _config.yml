@@ -1,13 +1,16 @@
-title: Kauri
-email: contato@example.com
+title: Alexandre Reeberg de Mello
+email: areeberg@gmail.com
 description: >-
-  Site de exemplo com o design Kauri: papel, fotocópia e retalhos de estampa de cera.
-lang: pt-BR
-baseurl: ""
-url: ""
+  AI strategy, governance and research. ARM Consulting, postdoctoral research on the AI lifecycle,
+  talks and workshops.
+# Repositório de projeto (areeberg/alexandre.github.io). Com domínio próprio, use baseurl: "".
+baseurl: "/alexandre.github.io"
+url: "https://areeberg.github.io"
+
+# Ordem do menu (cada página tem "ref" e "lang" no front matter).
+nav_refs: [home, consulting, research, talks, about]
 
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
 plugins:
   - jekyll-feed
 

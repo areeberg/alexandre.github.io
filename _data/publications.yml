@@ -1,0 +1,88 @@
+# Fonte: Google Scholar e ORCID (consultados em 22/10/2026).
+metrics:
+  as_of_en: Oct 22, 2026
+  as_of_pt: 22/10/2026
+  citations: 105
+  h_index: 5
+  i10_index: 3
+
+papers:
+  - year: 2026
+    title: "Lifecycle for Artificial Intelligence: a systematic literature review"
+    venue: SSRN preprint
+    url: https://doi.org/10.2139/ssrn.6672671
+    tag: governance
+  - year: 2026
+    title: A Detector and Vision-Language Model Pipeline for Object Description in Maritime Search and Rescue
+    venue: Brazilian Conference on Intelligent Systems (BRACIS), LNCS
+    url: https://doi.org/10.1007/978-3-032-39892-5_7
+  - year: 2025
+    title: Pneumonia Detection Based on X-Ray and Blood Tests with Multimodal and Federated Learning
+    venue: Iberoamerican Congress on Pattern Recognition (CIARP)
+    url: https://doi.org/10.1007/978-3-032-23176-5_21
+  - year: 2025
+    title: "Act-retrieval: a framework for action-based image retrieval"
+    venue: Multimedia Tools and Applications
+    url: https://doi.org/10.1007/s11042-025-20783-5
+  - year: 2025
+    title: Small Object Detection in Drone Captured Images for Maritime Surveillance
+    venue: SIBGRAPI 2025
+  - year: 2025
+    title: "LLM-Based Text-to-SQL for SparkSQL Queries in Manufacturing Data Lakes: An Architecture for Industry 4.0"
+    venue: ISCMI 2025
+  - year: 2025
+    title: "Robot Health: Anomaly Detection for Predictive Maintenance"
+    venue: ISCMI 2025
+  - year: 2024
+    title: An Autonomous Search System for Maritime Applications
+    venue: MIWAI 2024, Springer
+    url: https://doi.org/10.1007/978-981-96-0695-5_29
+  - year: 2024
+    title: An embedded NLP system to Voice-to-Commands
+    venue: Congresso Brasileiro de Automática (CBA)
+  - year: 2023
+    title: Malware identification on Portable Executable files using Opcodes Sequence
+    venue: Brazilian Congress on Computational Intelligence (CBIC)
+    url: https://doi.org/10.21528/cbic2023-006
+  - year: 2023
+    title: Explainable Boosting Classifier for malware detection and local explanation
+    venue: HotSoS, Hot Topics in the Science of Security (poster)
+  - year: 2021
+    title: Concrete dam inspection with UAV imagery and DCNN-based object detection
+    venue: IEEE International Conference on Imaging Systems and Techniques (IST)
+  - year: 2020
+    title: Incremental and decremental fuzzy bounded twin support vector machine
+    venue: Information Sciences
+    url: https://doi.org/10.1016/j.ins.2020.03.038
+  - year: 2018
+    title: Support vector candidates selection via Delaunay graph and convex-hull for large and high-dimensional datasets
+    venue: Pattern Recognition Letters
+    url: https://doi.org/10.1016/j.patrec.2018.09.001
+  - year: 2017
+    title: "Automated visual inspection system for printed circuit boards for small series production: a multiagent context approach"
+    venue: Developing and Applying Optoelectronics in Machine Vision, IGI Global
+    url: https://doi.org/10.4018/978-1-5225-0632-4.ch003
+  - year: 2015
+    title: Inspecting surface mounted devices using k nearest neighbor and multilayer perceptron
+    venue: IEEE International Symposium on Industrial Electronics (ISIE)
+    url: https://doi.org/10.1109/isie.2015.7281599
+
+reports:
+  - year: 2024
+    title: "Technical trustworthiness and data governance assurance of models (SAFE project)"
+    venue: GPAI, Data Governance Working Group
+  - year: 2021
+    title: Future of Work Working Group Report
+    venue: GPAI, Future of Work Working Group
+    url: http://magazine.gpai.paris/reports/2021_10_31_FoW_WG_2021_Rapport_EN_final.pdf
+  - year: 2021
+    title: Future of Work, AI Observatory at the Workplace
+    venue: GPAI, Future of Work Working Group
+
+patents:
+  - year: 2024
+    title: System and method for an agricultural harvester
+    venue: USPTO (18/457,746 and 18/457,748), CNIPA (202311108382.5), INPI (BR 102022017462-8)
+  - year: 2026
+    title: System for converting voice to commands
+    venue: USPTO application 18/987,664

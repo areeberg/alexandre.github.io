@@ -1,0 +1,28 @@
+{%- assign lang = page.lang -%}
+<div class="pagina">
+  <section class="secao">
+    <div class="cabeca-secao">
+      <p class="anotacao">{% if lang == 'pt' %}palestras e workshops{% else %}talks and workshops{% endif %}</p>
+      <h1 class="display">{% if lang == 'pt' %}No palco{% else %}On stage{% endif %}</h1>
+      <p class="cabeca-secao__texto">{% if lang == 'pt' %}Palestras e workshops sobre IA aplicada, governança e uso responsável de IA em áreas reguladas. Para levar um destes temas ao seu evento ou à sua equipe, escreva.{% else %}Talks and workshops on applied AI, governance and the responsible use of AI in regulated fields. To bring one of these topics to your event or team, get in touch.{% endif %}</p>
+    </div>
+    <div class="lista-palestras">
+      {%- for tk in site.data.talks %}
+      {% include palestra.html talk=tk lang=lang full=true %}
+      {%- endfor %}
+    </div>
+  </section>
+</div>
+
+<section class="faixa">
+  <div class="pagina duas-colunas">
+    <div>
+      <p class="anotacao" style="color: var(--amarelo-cera)">{% if lang == 'pt' %}para empresas e escritórios{% else %}for companies and law firms{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}Leve o workshop para o seu time{% else %}Bring the workshop to your team{% endif %}</h2>
+    </div>
+    <div>
+      <p style="margin-top: 0">{% if lang == 'pt' %}O workshop "IA no trabalho jurídico" é prático e adaptado à rotina do escritório: cada participante sai com um kit de prompts e um roteiro para segunda-feira.{% else %}The "AI in legal work" workshop is hands-on and adapted to the firm's routine: each participant leaves with a prompt kit and a plan for Monday.{% endif %}</p>
+      <a class="ka-botao ka-botao--domingo" href="mailto:{{ site.data.links.email }}?subject=Workshop">{% if lang == 'pt' %}Pedir uma proposta{% else %}Request a proposal{% endif %}</a>
+    </div>
+  </div>
+</section>

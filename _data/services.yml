@@ -1,0 +1,57 @@
+# Serviços da ARM Consulting (fonte: Obsidian, ARM/ARM Consulting - Divulgação).
+- id: strategy
+  estampa: cera
+  en:
+    title: AI Strategy & Roadmap
+    text: Assessment of where you are today, prioritised use cases and an executable roadmap built around ROI and technical feasibility.
+  pt:
+    title: Estratégia e roadmap de IA
+    text: Diagnóstico do cenário atual, casos de uso prioritários e um roadmap executável com foco em ROI e viabilidade técnica.
+- id: governance
+  estampa: folha
+  en:
+    title: AI Governance
+    text: AI maturity assessment, a roadmap to raise it, and guidance on governance frameworks and methods across the AI lifecycle.
+  pt:
+    title: Governança de IA
+    text: Avaliação de maturidade em IA, roadmap de evolução e orientação sobre metodologias e frameworks de governança no ciclo de vida da IA.
+- id: teams
+  estampa: jade
+  en:
+    title: Building AI Teams
+    text: Role definition, technical selection and team composition that fits the business and the stage of the project.
+  pt:
+    title: Criação de times de IA
+    text: Definição de perfis, seleção técnica e composição de equipes aderentes ao negócio e ao estágio do projeto.
+- id: rnd
+  estampa: cera
+  en:
+    title: R&D Project Writing & Funding
+    text: Proposals for FINEP, Lei da Informática and Lei do Bem, with scope, deliverables, indicators and compliance defined up front.
+  pt:
+    title: Captação e escrita de projetos de P&D
+    text: Projetos para FINEP, Lei da Informática e Lei do Bem, com escopo, entregáveis, indicadores e conformidade definidos desde o início.
+- id: aaas
+  estampa: folha
+  en:
+    title: AI as a Service
+    text: Ongoing follow-up of deliveries, technical interviews and recurring strategic guidance for teams still building internal maturity.
+  pt:
+    title: AI as a Service
+    text: Acompanhamento contínuo de entregas, entrevistas técnicas e orientação estratégica recorrente para times sem maturidade interna suficiente.
+- id: icts
+  estampa: jade
+  en:
+    title: Matchmaking with Research Institutes
+    text: Connections with partner Science and Technology Institutes (ICTs) for R&D, applied research and technology cooperation.
+  pt:
+    title: Matchmaking com ICTs
+    text: Conexão com Institutos de Ciência e Tecnologia parceiros para P&D, pesquisa aplicada e cooperação tecnológica.
+- id: science
+  estampa: cera
+  en:
+    title: Scientific Consulting
+    text: Experiment design, guidance and writing of scientific papers, and support for master's and PhD work in applied AI.
+  pt:
+    title: Consultoria científica
+    text: Definição de experimentos, orientação e escrita de artigos científicos e apoio a mestrados e doutorados em IA aplicada.

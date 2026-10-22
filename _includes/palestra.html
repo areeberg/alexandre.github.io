@@ -1,0 +1,31 @@
+{%- comment -%} Cartão de palestra. Parâmetros: include.talk, include.lang {%- endcomment -%}
+{%- assign tk = include.talk -%}
+{%- assign tx = tk[include.lang] -%}
+{%- assign t = site.data.ui[include.lang] -%}
+{%- assign ano = tk.date | slice: 0, 4 -%}
+{%- assign mes = tk.date | slice: 5, 2 | plus: 0 -%}
+{%- if include.lang == 'pt' -%}
+  {%- assign meses = "jan,fev,mar,abr,mai,jun,jul,ago,set,out,nov,dez" | split: "," -%}
+{%- else -%}
+  {%- assign meses = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
+{%- endif -%}
+{%- assign mes_idx = mes | minus: 1 -%}
+<article class="palestra{% if tk.status == 'upcoming' %} palestra--proxima{% endif %}">
+  <div class="palestra__quando">
+    <span class="palestra__mes">{{ meses[mes_idx] }}</span>
+    <span class="palestra__ano">{{ ano }}</span>
+  </div>
+  <div class="palestra__corpo">
+    <div class="tags">
+      <span class="ka-buzio{% if tk.status == 'upcoming' %} ka-buzio--cera{% endif %}">{% if tk.status == 'upcoming' %}{{ t.upcoming }}{% else %}{{ tx.kind }}{% endif %}</span>
+      {%- if tk.event != "" %}<span class="legenda">{{ tk.event }}{% if tk.city != "" %} · {{ tk.city }}{% endif %}</span>{% endif %}
+    </div>
+    <h3 class="titulo-2">{{ tx.title }}</h3>
+    <p>{{ tx.text }}</p>
+    {%- if tx.modules and include.full %}
+    <ol class="palestra__modulos">
+      {%- for m in tx.modules %}<li>{{ m }}</li>{% endfor %}
+    </ol>
+    {%- endif %}
+  </div>
+</article>

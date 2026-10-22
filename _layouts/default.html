@@ -1,10 +1,18 @@
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.ui[lang] -%}
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="claro">
+<html lang="{% if lang == 'pt' %}pt-BR{% else %}en{% endif %}" data-theme="claro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title and page.url != '/' %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <title>{% if page.title and page.ref != 'home' %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  {%- if page.ref %}
+  {%- assign versoes = site.pages | where: "ref", page.ref %}
+  {%- for v in versoes %}
+  <link rel="alternate" hreflang="{% if v.lang == 'pt' %}pt-BR{% else %}en{% endif %}" href="{{ v.url | absolute_url }}">
+  {%- endfor %}
+  {%- endif %}
   <link rel="stylesheet" href="{{ '/assets/css/kauri.css' | relative_url }}">
   <link rel="preload" href="{{ '/assets/fonts/AbrilFatface-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <script>
@@ -18,7 +26,7 @@
   </script>
 </head>
 <body>
-  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <a class="pular" href="#conteudo">{{ t.skip }}</a>
   {% include cabecalho.html %}
   <main id="conteudo">
     {{ content }}

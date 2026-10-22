@@ -1,0 +1,55 @@
+# Palestras e workshops. Os itens marcados com "# CONFIRMAR" precisam de título e data reais.
+- id: dss-curitiba-2026
+  status: upcoming
+  date: 2026-10
+  event: Data Science Summit
+  city: Curitiba, PR
+  en:
+    kind: Talk
+    title: "[Talk title to confirm]"
+    text: "[One-sentence summary of the talk.]"
+  pt:
+    kind: Palestra
+    title: "[Título da palestra a confirmar]"
+    text: "[Resumo da palestra em uma frase.]"
+- id: workshop-ia-juridico
+  status: delivered
+  date: 2026-10
+  event: ""   # CONFIRMAR: evento ou cliente onde o workshop foi dado
+  city: ""
+  featured: true
+  en:
+    kind: Workshop
+    title: AI in legal work
+    text: "A hands-on workshop for lawyers: from a client's voice note to a fee agreement, a dated case chronology with page references, a devil's-advocate review of one's own brief, citation checking, and the ethics, LGPD and data-protection rules that apply when the lawyer signs."
+    modules:
+      - How language models work, in six intuitions
+      - "Contracts: from the client's audio to the fee agreement"
+      - "Case files: a chronology with page of origin"
+      - "Devil's advocate: where my brief falls apart"
+      - "Citations: legal research without sanctions"
+      - Ethics, LGPD and data protection
+  pt:
+    kind: Workshop
+    title: IA no trabalho jurídico
+    text: "Workshop prático para advogados: do áudio da cliente ao contrato de honorários, a cronologia do acervo com página de origem, o advogado do diabo da própria peça, a checagem de citações e as regras de ética, LGPD e proteção de dados, porque quem assina responde."
+    modules:
+      - Como o modelo funciona, em seis intuições
+      - "Contrato: do áudio da cliente ao contrato de honorários"
+      - "Acervo: a cronologia com página de origem"
+      - "Advogado do diabo: por onde a minha peça cai"
+      - "Citações: pesquisa jurídica sem multa"
+      - Ética, LGPD e proteção de dados
+- id: proudtech-2026
+  status: delivered
+  date: 2026-09
+  event: ProudTech 2026
+  city: Florianópolis, SC
+  en:
+    kind: Talk
+    title: "[Talk title to confirm]"
+    text: "[One-sentence summary of the talk.]"
+  pt:
+    kind: Palestra
+    title: "[Título da palestra a confirmar]"
+    text: "[Resumo da palestra em uma frase.]"
