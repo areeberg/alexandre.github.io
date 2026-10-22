@@ -1,24 +1,15 @@
 ---
 layout: default
+lang: en
+title: Page not found
+permalink: /404.html
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="pagina">
+  <section class="secao">
+    <p class="anotacao">página não encontrada</p>
+    <h1 class="display-xl">404</h1>
+    <p style="margin: var(--esp-24) 0 var(--esp-32)">This page doesn't exist or has moved. · Esta página não existe ou mudou de lugar.</p>
+    <a class="ka-botao" href="{{ '/' | relative_url }}">Home</a>
+    <a class="ka-botao ka-botao--fantasma" href="{{ '/pt/' | relative_url }}">Início</a>
+  </section>
 </div>

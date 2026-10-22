@@ -1,0 +1,100 @@
+{%- assign lang = page.lang -%}
+{%- assign pg = site.pages | where: "lang", lang -%}
+{%- assign p_cons = pg | where: "ref", "consulting" | first -%}
+{%- assign p_res = pg | where: "ref", "research" | first -%}
+{%- assign p_talks = pg | where: "ref", "talks" | first -%}
+{%- assign m = site.data.publications.metrics -%}
+<div class="pagina">
+  <section class="hero">
+    <div class="hero__texto">
+      {% if lang == 'pt' %}
+      <p class="anotacao">estratégia, governança e pesquisa em IA</p>
+      <h1 class="display">IA que sai do laboratório e chega à produção, com governança.</h1>
+      <p>Sou Alexandre Reeberg de Mello, doutor em Inteligência Artificial, Gerente Corporativo de IA na Starian e fundador da ARM Consulting. Ajudo empresas a construir, avaliar e escalar projetos de IA com rigor técnico e visão de negócio. No pós-doutorado na UFSC, pesquiso governança e ciclo de vida da IA.</p>
+      <a class="ka-botao ka-botao--domingo" href="{{ p_cons.url | relative_url }}">Contratar a ARM</a>
+      <a class="ka-botao ka-botao--fantasma" href="{{ p_res.url | relative_url }}">Ver a pesquisa</a>
+      {% else %}
+      <p class="anotacao">ai strategy, governance and research</p>
+      <h1 class="display">AI that leaves the lab and reaches production, with governance.</h1>
+      <p>I'm Alexandre Reeberg de Mello, PhD in Artificial Intelligence, AI Corporate Manager at Starian and founder of ARM Consulting. I help companies build, assess and scale AI projects with technical rigour and business sense. My postdoctoral research at UFSC is on AI governance across the lifecycle.</p>
+      <a class="ka-botao ka-botao--domingo" href="{{ p_cons.url | relative_url }}">Work with ARM</a>
+      <a class="ka-botao ka-botao--fantasma" href="{{ p_res.url | relative_url }}">See the research</a>
+      {% endif %}
+    </div>
+    <div class="hero__colagem" aria-hidden="true">
+      <div class="hero__laje"></div>
+      <div class="hero__oval"></div>
+      <div class="hero__cera ka-estampa-cera"></div>
+      <div class="selo"><span>PhD</span><span>GPAI</span><span>AI Expert</span></div>
+    </div>
+  </section>
+</div>
+
+<section class="faixa">
+  <div class="pagina">
+    <p class="anotacao" style="color: var(--amarelo-cera)">{% if lang == 'pt' %}em números{% else %}in numbers{% endif %}</p>
+    <dl class="numeros">
+      <div><dt>{% if lang == 'pt' %}empresas atendidas{% else %}companies served{% endif %}</dt><dd>20+</dd></div>
+      <div><dt>{% if lang == 'pt' %}em projetos de P&amp;D executados{% else %}in R&amp;D projects delivered{% endif %}</dt><dd>R$&nbsp;40M+</dd></div>
+      <div><dt>{% if lang == 'pt' %}patentes depositadas e concedidas{% else %}patents filed and granted{% endif %}</dt><dd>3</dd></div>
+      <div><dt>{% if lang == 'pt' %}citações no Google Scholar{% else %}citations on Google Scholar{% endif %}</dt><dd>{{ m.citations }}</dd></div>
+    </dl>
+  </div>
+</section>
+
+<div class="pagina">
+  <section class="secao">
+    <div class="cabeca-secao">
+      <p class="anotacao">{% if lang == 'pt' %}três frentes{% else %}three fronts{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}O que eu faço{% else %}What I do{% endif %}</h2>
+    </div>
+    <div class="retalhos">
+      <a class="ka-retalho" href="{{ p_cons.url | relative_url }}">
+        <div class="ka-retalho__estampa ka-estampa-cera"></div>
+        <div class="ka-retalho__corpo ka-grade">
+          <h3 class="ka-retalho__titulo">ARM Consulting</h3>
+          <p class="ka-retalho__texto">{% if lang == 'pt' %}Estratégia, governança, times de IA e projetos de P&amp;D, do estratégico ao técnico.{% else %}Strategy, governance, AI teams and R&amp;D projects, from the boardroom to the codebase.{% endif %}</p>
+          <p class="ka-retalho__nota">{{ site.data.services.size }} {% if lang == 'pt' %}serviços{% else %}services{% endif %}</p>
+        </div>
+      </a>
+      <a class="ka-retalho ka-retalho--alt" href="{{ p_res.url | relative_url }}">
+        <div class="ka-retalho__estampa ka-estampa-folha"></div>
+        <div class="ka-retalho__corpo ka-grade">
+          <h3 class="ka-retalho__titulo">{% if lang == 'pt' %}Pesquisa{% else %}Research{% endif %}</h3>
+          <p class="ka-retalho__texto">{% if lang == 'pt' %}Pós-doutorado em governança e ciclo de vida da IA, com publicações em visão computacional, ML e cibersegurança.{% else %}Postdoc on AI governance and lifecycle, with publications in computer vision, ML and cybersecurity.{% endif %}</p>
+          <p class="ka-retalho__nota">h-index {{ m.h_index }}</p>
+        </div>
+      </a>
+      <a class="ka-retalho" href="{{ p_talks.url | relative_url }}">
+        <div class="ka-retalho__estampa ka-estampa-jade"></div>
+        <div class="ka-retalho__corpo ka-grade">
+          <h3 class="ka-retalho__titulo">{% if lang == 'pt' %}Palestras{% else %}Talks{% endif %}</h3>
+          <p class="ka-retalho__texto">{% if lang == 'pt' %}Workshops e palestras sobre IA aplicada, governança e IA no trabalho jurídico.{% else %}Workshops and talks on applied AI, governance and AI in legal work.{% endif %}</p>
+          <p class="ka-retalho__nota">{{ site.data.talks.size }} {% if lang == 'pt' %}eventos{% else %}events{% endif %}</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="secao" style="padding-top: 0">
+    <div class="cabeca-secao duas-colunas" style="align-items: end">
+      <div>
+        <p class="anotacao">{% if lang == 'pt' %}agenda{% else %}on stage{% endif %}</p>
+        <h2 class="display">{% if lang == 'pt' %}Palestras e workshops{% else %}Talks and workshops{% endif %}</h2>
+      </div>
+      <p><a class="ka-link" href="{{ p_talks.url | relative_url }}">{% if lang == 'pt' %}Ver todos{% else %}See all{% endif %}</a></p>
+    </div>
+    <div class="lista-palestras">
+      {%- for tk in site.data.talks limit: 2 %}
+      {% include palestra.html talk=tk lang=lang %}
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="secao credenciais" style="padding-top: 0">
+    <p class="rotulo">{% if lang == 'pt' %}trajetória e parcerias{% else %}track record and partners{% endif %}</p>
+    <ul class="marcas">
+      <li>Starian</li><li>Fundação CERTI</li><li>GPAI</li><li>PSafe</li><li>Instituto SENAI</li><li>UFSC</li><li>ÉTS Montréal</li><li>Halmstad University</li><li>Linköping University</li><li>Inovativa Brasil</li>
+    </ul>
+  </section>
+</div>

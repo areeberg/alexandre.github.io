@@ -1,0 +1,61 @@
+{%- assign lang = page.lang -%}
+{%- assign ex = site.data.experience -%}
+<div class="pagina">
+  <section class="secao duas-colunas">
+    <div>
+      <p class="anotacao">{% if lang == 'pt' %}quem sou{% else %}about{% endif %}</p>
+      <h1 class="display" style="margin-top: var(--esp-8)">Alexandre Reeberg de Mello</h1>
+      <p class="rotulo" style="margin-top: var(--esp-16); color: var(--grafite)">{% if lang == 'pt' %}Gerente Corporativo de IA · Starian<br>Fundador · ARM Consulting{% else %}AI Corporate Manager · Starian<br>Founder · ARM Consulting{% endif %}</p>
+    </div>
+    <div class="texto-corrido">
+      {% if lang == 'pt' %}
+      <p>Doutor e mestre em Inteligência Artificial pela Pós-Graduação em Engenharia de Automação e Sistemas da UFSC, com período de doutorado na École de technologie supérieure (ÉTS), em Montreal, construí minha carreira como pesquisador, desenvolvedor e líder de IA no Instituto SENAI de Inovação, na PSafe e na Fundação CERTI.</p>
+      <p>Essa trajetória técnica me levou à convicção de que faltam métodos robustos para governar a IA e desenvolver times de IA com estratégia. Hoje, como Gerente Corporativo de IA na Starian e pesquisador de pós-doutorado na UFSC, em parceria com a Halmstad University, lidero a governança de IA, a conformidade regulatória e o desenvolvimento de pessoas.</p>
+      <p>Fui especialista em IA do Global Partnership on AI (GPAI) nos temas de futuro do trabalho e de confiabilidade técnica e governança de dados de modelos. Sou autor de publicações em revistas e congressos e inventor em patentes concedidas em vários países.</p>
+      <p class="legenda">Idiomas: português, inglês (fluente), espanhol (profissional), francês (básico).</p>
+      {% else %}
+      <p>I hold a PhD and an MSc in Artificial Intelligence from the Graduate Program in Automation and Systems Engineering at UFSC, with a doctoral stay at the École de technologie supérieure (ÉTS) in Montreal. I built my career as a researcher, developer and AI leader at Instituto SENAI de Inovação, PSafe and Fundação CERTI.</p>
+      <p>That technical path convinced me that robust methods to govern AI, and to build AI teams with strategy, are still missing. Today, as AI Corporate Manager at Starian and postdoctoral researcher at UFSC in partnership with Halmstad University, I lead AI governance, regulatory compliance and people development.</p>
+      <p>I served as an AI Expert at the Global Partnership on AI (GPAI) on the future of work and on the technical trustworthiness and data governance assurance of models. I'm the author of journal and conference papers and an inventor on patents granted in several countries.</p>
+      <p class="legenda">Languages: Portuguese, English (fluent), Spanish (professional), French (elementary).</p>
+      {% endif %}
+    </div>
+  </section>
+</div>
+
+<section class="faixa">
+  <div class="pagina">
+    <div class="cabeca-secao">
+      <p class="anotacao" style="color: var(--amarelo-cera)">{% if lang == 'pt' %}trajetória{% else %}experience{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}Onde atuei{% else %}Where I've worked{% endif %}</h2>
+    </div>
+    <ol class="linha-tempo">
+      {%- for e in ex %}
+      {%- if e.org %}
+      <li>
+        <span class="linha-tempo__periodo">{{ e.period }}</span>
+        <div>
+          <h3 class="titulo-3">{{ e[lang].role }}</h3>
+          <p class="rotulo linha-tempo__org">{{ e.org }}</p>
+          <p class="corpo-sm">{{ e[lang].text }}</p>
+        </div>
+      </li>
+      {%- endif %}
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<div class="pagina">
+  <section class="secao">
+    <div class="cabeca-secao">
+      <p class="anotacao">{% if lang == 'pt' %}formação{% else %}education{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}Formação acadêmica{% else %}Education{% endif %}</h2>
+    </div>
+    <ol class="pubs">
+      {%- for e in site.data.education %}
+      <li class="pub"><span class="pub__ano">{{ e.period }}</span><div><p class="pub__titulo">{{ e[lang] }}</p><p class="legenda">{{ e.org }}</p></div></li>
+      {%- endfor %}
+    </ol>
+  </section>
+</div>

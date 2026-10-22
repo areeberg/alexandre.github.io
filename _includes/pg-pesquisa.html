@@ -1,0 +1,101 @@
+{%- assign lang = page.lang -%}
+{%- assign pub = site.data.publications -%}
+{%- assign l = site.data.links -%}
+<div class="pagina">
+  <section class="hero hero--curto">
+    <div class="hero__texto">
+      <p class="anotacao">{% if lang == 'pt' %}pós-doutorado · UFSC e Halmstad University{% else %}postdoc · UFSC and Halmstad University{% endif %}</p>
+      {% if lang == 'pt' %}
+      <h1 class="display">Governança de IA ao longo do ciclo de vida.</h1>
+      <p>No pós-doutorado na Universidade Federal de Santa Catarina, em parceria com a Halmstad University (Suécia), pesquiso como caracterizar o ciclo de vida de desenvolvimento de sistemas de IA na escala de Technology Readiness Level (TRL). O objetivo é dar a quem governa IA nas empresas critérios concretos para decidir quando um sistema avança de etapa, que evidências pedir em cada uma e como transformar marcos como o NIST AI RMF e o EU AI Act em decisões de projeto.</p>
+      {% else %}
+      <h1 class="display">AI governance across the lifecycle.</h1>
+      <p>My postdoctoral research at the Federal University of Santa Catarina (UFSC), in partnership with Halmstad University (Sweden), characterises the development lifecycle of AI systems on the Technology Readiness Level (TRL) scale. The goal is to give the people who govern AI in companies concrete criteria to decide when a system moves to the next stage, what evidence to ask for at each stage, and how to turn frameworks such as the NIST AI RMF and the EU AI Act into project decisions.</p>
+      {% endif %}
+      <a class="ka-botao ka-botao--fantasma" href="{{ l.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="ka-botao ka-botao--fantasma" href="{{ l.orcid }}" target="_blank" rel="noopener">ORCID</a>
+    </div>
+    <div class="metricas ka-grade" aria-label="Google Scholar">
+      <p class="rotulo">Google Scholar</p>
+      <dl>
+        <div><dt>{% if lang == 'pt' %}citações{% else %}citations{% endif %}</dt><dd>{{ pub.metrics.citations }}</dd></div>
+        <div><dt>h-index</dt><dd>{{ pub.metrics.h_index }}</dd></div>
+        <div><dt>i10-index</dt><dd>{{ pub.metrics.i10_index }}</dd></div>
+      </dl>
+      <p class="legenda">{% if lang == 'pt' %}em {{ pub.metrics.as_of_pt }}{% else %}as of {{ pub.metrics.as_of_en }}{% endif %}</p>
+    </div>
+  </section>
+</div>
+
+<section class="faixa">
+  <div class="pagina">
+    <div class="cabeca-secao">
+      <p class="anotacao" style="color: var(--amarelo-cera)">{% if lang == 'pt' %}linhas de pesquisa{% else %}research lines{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}Onde a pesquisa encontra a operação{% else %}Where research meets operations{% endif %}</h2>
+    </div>
+    <div class="retalhos">
+      <div class="ka-retalho">
+        <div class="ka-retalho__estampa ka-estampa-folha"></div>
+        <div class="ka-retalho__corpo ka-grade">
+          <h3 class="ka-retalho__titulo">{% if lang == 'pt' %}Ciclo de vida e TRL{% else %}Lifecycle and TRL{% endif %}</h3>
+          <p class="ka-retalho__texto">{% if lang == 'pt' %}Revisão sistemática da literatura sobre ciclos de vida de IA e um modelo de maturidade por etapa, de TRL 1 a 9.{% else %}A systematic literature review of AI lifecycles and a stage-by-stage maturity model, from TRL 1 to 9.{% endif %}</p>
+        </div>
+      </div>
+      <div class="ka-retalho ka-retalho--alt">
+        <div class="ka-retalho__estampa ka-estampa-cera"></div>
+        <div class="ka-retalho__corpo ka-grade">
+          <h3 class="ka-retalho__titulo">{% if lang == 'pt' %}Governança operacional{% else %}Operational governance{% endif %}</h3>
+          <p class="ka-retalho__texto">{% if lang == 'pt' %}Stage-gates, evidências e avaliações (evals) em cada etapa, conectando política de IA ao dia a dia dos times.{% else %}Stage gates, evidence and evaluations at each stage, connecting AI policy to the daily work of engineering teams.{% endif %}</p>
+        </div>
+      </div>
+      <div class="ka-retalho">
+        <div class="ka-retalho__estampa ka-estampa-jade"></div>
+        <div class="ka-retalho__corpo ka-grade">
+          <h3 class="ka-retalho__titulo">{% if lang == 'pt' %}Confiabilidade e dados{% else %}Trustworthiness and data{% endif %}</h3>
+          <p class="ka-retalho__texto">{% if lang == 'pt' %}Confiabilidade técnica e governança de dados de modelos, tema do trabalho no GPAI (projeto SAFE).{% else %}Technical trustworthiness and data governance assurance of models, the theme of the GPAI SAFE project.{% endif %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pagina">
+  <section class="secao">
+    <div class="cabeca-secao">
+      <p class="anotacao">{% if lang == 'pt' %}publicações selecionadas{% else %}selected publications{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}Artigos e capítulos{% else %}Papers and chapters{% endif %}</h2>
+    </div>
+    <ol class="pubs">
+      {%- for p in pub.papers %}
+      <li class="pub{% if p.tag == 'governance' %} pub--destaque{% endif %}">
+        <span class="pub__ano">{{ p.year }}</span>
+        <div>
+          <p class="pub__titulo">{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+          <p class="legenda">{{ p.venue }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+
+  <section class="secao duas-colunas" style="padding-top: 0">
+    <div>
+      <p class="anotacao">GPAI</p>
+      <h2 class="titulo-1" style="margin: var(--esp-8) 0 var(--esp-24)">{% if lang == 'pt' %}Relatórios internacionais{% else %}International reports{% endif %}</h2>
+      <ol class="pubs">
+        {%- for p in pub.reports %}
+        <li class="pub"><span class="pub__ano">{{ p.year }}</span><div><p class="pub__titulo">{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p><p class="legenda">{{ p.venue }}</p></div></li>
+        {%- endfor %}
+      </ol>
+    </div>
+    <div>
+      <p class="anotacao">{% if lang == 'pt' %}propriedade intelectual{% else %}intellectual property{% endif %}</p>
+      <h2 class="titulo-1" style="margin: var(--esp-8) 0 var(--esp-24)">{% if lang == 'pt' %}Patentes{% else %}Patents{% endif %}</h2>
+      <ol class="pubs">
+        {%- for p in pub.patents %}
+        <li class="pub"><span class="pub__ano">{{ p.year }}</span><div><p class="pub__titulo">{{ p.title }}</p><p class="legenda">{{ p.venue }}</p></div></li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+</div>
