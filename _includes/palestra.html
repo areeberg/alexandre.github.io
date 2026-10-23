@@ -12,16 +12,28 @@
 {%- assign mes_idx = mes | minus: 1 -%}
 <article class="palestra{% if tk.status == 'upcoming' %} palestra--proxima{% endif %}">
   <div class="palestra__quando">
+    {%- if tk.date and tk.date != "" %}
     <span class="palestra__mes">{{ meses[mes_idx] }}</span>
     <span class="palestra__ano">{{ ano }}</span>
+    {%- else %}
+    <span class="palestra__mes" aria-hidden="true">—</span>
+    {%- endif %}
   </div>
   <div class="palestra__corpo">
     <div class="tags">
       <span class="ka-buzio{% if tk.status == 'upcoming' %} ka-buzio--cera{% endif %}">{% if tk.status == 'upcoming' %}{{ t.upcoming }}{% else %}{{ tx.kind }}{% endif %}</span>
-      {%- if tk.event != "" %}<span class="legenda">{{ tk.event }}{% if tk.city != "" %} · {{ tk.city }}{% endif %}</span>{% endif %}
+      {%- if tx.title != "" and tk.event != "" %}<span class="legenda">{{ tk.event }}{% if tk.city != "" %} · {{ tk.city }}{% endif %}</span>{% endif %}
     </div>
+    {%- if tx.title != "" %}
     <h3 class="titulo-2">{{ tx.title }}</h3>
-    <p>{{ tx.text }}</p>
+    {%- else %}
+    <h3 class="titulo-2">{{ tk.event }}</h3>
+    {%- if tk.city != "" %}<p class="legenda">{{ tk.city }}</p>{% endif %}
+    {%- endif %}
+    {%- if tx.text != "" %}<p>{{ tx.text }}</p>{% endif %}
+    {%- if tk.video %}
+    <p class="palestra__video"><a class="ka-link" href="{{ tk.video }}" target="_blank" rel="noopener">{% if include.lang == 'pt' %}Assistir à gravação{% else %}Watch the recording{% endif %}</a></p>
+    {%- endif %}
     {%- if tx.modules and include.full %}
     <ol class="palestra__modulos">
       {%- for m in tx.modules %}<li>{{ m }}</li>{% endfor %}

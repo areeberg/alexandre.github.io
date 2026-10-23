@@ -8,7 +8,7 @@ baseurl: "/alexandre.github.io"
 url: "https://areeberg.github.io"
 
 # Ordem do menu (cada página tem "ref" e "lang" no front matter).
-nav_refs: [home, consulting, research, talks, about]
+nav_refs: [home, consulting, research, talks, cv, about]
 
 markdown: kramdown
 plugins:

@@ -1,0 +1,31 @@
+# Perguntas frequentes da página de consultoria.
+- en:
+    q: How does an engagement start?
+    a: "With a conversation to understand your context, goals and constraints. Then you receive a proposal with scope, deliverables, timeline and investment, before any commitment."
+  pt:
+    q: Como começa um projeto?
+    a: "Com uma conversa para entender o contexto, os objetivos e as restrições. Depois você recebe uma proposta com escopo, entregáveis, prazo e investimento, antes de qualquer compromisso."
+- en:
+    q: How is the work priced?
+    a: "Per project, with a closed scope, or as a monthly retainer in the fractional Head of AI format."
+  pt:
+    q: Como é a cobrança?
+    a: "Por projeto, com escopo fechado, ou mensalmente, no formato de head de IA sob demanda."
+- en:
+    q: Remote or on site?
+    a: "Remote across Brazil and abroad, with on-site meetings when the project calls for them. Work can be in Portuguese or English."
+  pt:
+    q: O atendimento é remoto ou presencial?
+    a: "Remoto em todo o Brasil e no exterior, com encontros presenciais quando o projeto pede. O atendimento pode ser em português ou inglês."
+- en:
+    q: What about the confidentiality of my data?
+    a: "A non-disclosure agreement is signed before any access to data or documents. Personal data is handled in line with the LGPD, and data stays in your environment whenever possible."
+  pt:
+    q: E a confidencialidade dos meus dados?
+    a: "Um acordo de confidencialidade é assinado antes de qualquer acesso a dados ou documentos. Dados pessoais são tratados conforme a LGPD e permanecem no seu ambiente sempre que possível."
+- en:
+    q: Who is ARM for?
+    a: "Companies starting or scaling AI, R&D institutes, and startups that need senior technical judgement: from the first use case to governance of systems in production."
+  pt:
+    q: Para quem é a ARM?
+    a: "Empresas que estão começando ou escalando IA, institutos de P&D e startups que precisam de julgamento técnico sênior: do primeiro caso de uso à governança de sistemas em produção."

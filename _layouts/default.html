@@ -1,28 +1,75 @@
 {%- assign lang = page.lang | default: 'en' -%}
 {%- assign t = site.data.ui[lang] -%}
+{%- assign l = site.data.links -%}
+{%- capture titulo %}{% if page.title and page.ref != 'home' %}{{ page.title }} · {% endif %}{{ site.title }}{% endcapture -%}
+{%- assign descricao = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 -%}
 <!DOCTYPE html>
 <html lang="{% if lang == 'pt' %}pt-BR{% else %}en{% endif %}" data-theme="claro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title and page.ref != 'home' %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <title>{{ titulo }}</title>
+  <meta name="description" content="{{ descricao }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
   {%- if page.ref %}
   {%- assign versoes = site.pages | where: "ref", page.ref %}
   {%- for v in versoes %}
   <link rel="alternate" hreflang="{% if v.lang == 'pt' %}pt-BR{% else %}en{% endif %}" href="{{ v.url | absolute_url }}">
   {%- endfor %}
   {%- endif %}
+  <meta property="og:type" content="{% if page.ref == 'home' %}website{% else %}profile{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ titulo }}">
+  <meta property="og:description" content="{{ descricao }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:locale" content="{% if lang == 'pt' %}pt_BR{% else %}en_US{% endif %}">
+  <meta property="og:image" content="{{ '/assets/img/og.png' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alexandre Reeberg de Mello, ARM Consulting">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="{{ '/assets/css/kauri.css' | relative_url }}">
   <link rel="preload" href="{{ '/assets/fonts/AbrilFatface-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <script>
     (function () {
+      var el = document.documentElement;
       try {
-        var t = localStorage.getItem('kauri-tema');
-        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
-        document.documentElement.setAttribute('data-theme', t);
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        var aplica = function () { el.setAttribute('data-theme', mq.matches ? 'escuro' : 'claro'); };
+        aplica();
+        mq.addEventListener('change', aplica);
       } catch (e) {}
     })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "{{ '/' | absolute_url }}#alexandre",
+        "name": "Alexandre Reeberg de Mello",
+        "jobTitle": "{% if lang == 'pt' %}Gerente Corporativo de IA{% else %}AI Corporate Manager{% endif %}",
+        "image": "{{ '/assets/img/alexandre-recorte.webp' | absolute_url }}",
+        "url": "{{ '/' | absolute_url }}",
+        "email": "mailto:{{ l.email }}",
+        "alumniOf": ["Universidade Federal de Santa Catarina", "École de technologie supérieure", "Pontifícia Universidade Católica do Paraná"],
+        "knowsAbout": ["Artificial Intelligence", "AI governance", "Machine learning", "Computer vision", "AI lifecycle"],
+        "sameAs": ["{{ l.linkedin }}", "{{ l.instagram }}", "{{ l.scholar }}", "{{ l.orcid }}"]
+      }{% if page.ref == 'home' or page.ref == 'consulting' %},
+      {
+        "@type": "ProfessionalService",
+        "name": "{{ l.company.name }}",
+        "legalName": "{{ l.company.legal_name }}",
+        "taxID": "{{ l.company.cnpj }}",
+        "description": "{% if lang == 'pt' %}Consultoria em Inteligência Artificial: governança de IA, projetos de P&D financiados e head de IA sob demanda.{% else %}Artificial Intelligence consulting: AI governance, funded R&D projects and fractional Head of AI.{% endif %}",
+        "url": "{{ page.url | absolute_url }}",
+        "email": "mailto:{{ l.email }}",
+        "areaServed": "BR",
+        "founder": { "@id": "{{ '/' | absolute_url }}#alexandre" }
+      }{% endif %}
+    ]
+  }
   </script>
 </head>
 <body>
@@ -32,13 +79,5 @@
     {{ content }}
   </main>
   {% include rodape.html %}
-  <script>
-    document.getElementById('tema').addEventListener('click', function () {
-      var el = document.documentElement;
-      var t = el.getAttribute('data-theme') === 'escuro' ? 'claro' : 'escuro';
-      el.setAttribute('data-theme', t);
-      try { localStorage.setItem('kauri-tema', t); } catch (e) {}
-    });
-  </script>
 </body>
 </html>

@@ -2,12 +2,10 @@
 {%- assign t = site.data.ui[lang] -%}
 {%- if lang == 'pt' %}{% assign outra = 'en' %}{% else %}{% assign outra = 'pt' %}{% endif -%}
 {%- assign paginas = site.pages | where: "lang", lang -%}
-{%- assign home = paginas | where: "ref", "home" | first -%}
 {%- assign alt = site.pages | where: "ref", page.ref | where: "lang", outra | first -%}
 {%- unless alt %}{% assign alt = site.pages | where: "ref", "home" | where: "lang", outra | first %}{% endunless -%}
 <header class="cabecalho">
   <div class="pagina">
-    <a class="marca" href="{{ home.url | relative_url }}">Alexandre <span>Reeberg de Mello</span></a>
     <nav class="nav" aria-label="{% if lang == 'pt' %}Principal{% else %}Main{% endif %}">
       {%- for ref in site.nav_refs %}
       {%- assign p = paginas | where: "ref", ref | first %}
@@ -16,7 +14,6 @@
       {%- endif %}
       {%- endfor %}
       <a class="tema" href="{{ alt.url | relative_url }}" lang="{% if outra == 'pt' %}pt-BR{% else %}en{% endif %}" hreflang="{% if outra == 'pt' %}pt-BR{% else %}en{% endif %}" aria-label="{{ t.switch_label }}">{{ t.switch_short }}</a>
-      <button id="tema" class="tema" type="button">{{ t.theme }}</button>
       <a class="ka-botao ka-botao--domingo" href="#contato">{{ t.contact }}</a>
     </nav>
   </div>
