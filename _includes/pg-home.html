@@ -8,17 +8,17 @@
   <section class="hero">
     <div class="hero__texto">
       {% if lang == 'pt' %}
-      <p class="anotacao">estratégia, governança e pesquisa em IA</p>
+      <p class="anotacao">ARM Consulting · consultoria em IA</p>
       <h1 class="display">IA que sai do laboratório e chega à produção, com governança.</h1>
-      <p>Sou Alexandre Reeberg de Mello, doutor em Inteligência Artificial, Gerente Corporativo de IA na Starian e fundador da ARM Consulting. Ajudo empresas a construir, avaliar e escalar projetos de IA com rigor técnico e visão de negócio. No pós-doutorado na UFSC, pesquiso governança e ciclo de vida da IA.</p>
-      <a class="ka-botao ka-botao--domingo" href="{{ p_cons.url | relative_url }}">Contratar a ARM</a>
-      <a class="ka-botao ka-botao--fantasma" href="{{ p_res.url | relative_url }}">Ver a pesquisa</a>
+      <p>A ARM Consulting ajuda empresas a levar projetos de IA da ideia à produção, com governança, o time certo e o financiamento adequado. À frente está Alexandre Reeberg de Mello, doutor em Inteligência Artificial, ex-head de IA da Fundação CERTI e especialista do GPAI, hoje Gerente Corporativo de IA na Starian.</p>
+      <a class="ka-botao ka-botao--domingo" href="#contato">Agendar uma conversa</a>
+      <a class="ka-botao ka-botao--fantasma" href="{{ p_cons.url | relative_url }}#ofertas">Ver as ofertas</a>
       {% else %}
-      <p class="anotacao">ai strategy, governance and research</p>
+      <p class="anotacao">ARM Consulting · AI consulting</p>
       <h1 class="display">AI that leaves the lab and reaches production, with governance.</h1>
-      <p>I'm Alexandre Reeberg de Mello, PhD in Artificial Intelligence, AI Corporate Manager at Starian and founder of ARM Consulting. I help companies build, assess and scale AI projects with technical rigour and business sense. My postdoctoral research at UFSC is on AI governance across the lifecycle.</p>
-      <a class="ka-botao ka-botao--domingo" href="{{ p_cons.url | relative_url }}">Work with ARM</a>
-      <a class="ka-botao ka-botao--fantasma" href="{{ p_res.url | relative_url }}">See the research</a>
+      <p>ARM Consulting helps companies take AI projects from idea to production, with governance, the right team and the right funding. It is led by Alexandre Reeberg de Mello, PhD in Artificial Intelligence, former Head of AI at Fundação CERTI and GPAI AI Expert, now AI Corporate Manager at Starian.</p>
+      <a class="ka-botao ka-botao--domingo" href="#contato">Book a conversation</a>
+      <a class="ka-botao ka-botao--fantasma" href="{{ p_cons.url | relative_url }}#ofertas">See the offers</a>
       {% endif %}
     </div>
     <div class="hero__colagem">
@@ -35,7 +35,7 @@
 
 <section class="faixa">
   <div class="pagina">
-    <p class="anotacao" style="color: var(--amarelo-cera)">{% if lang == 'pt' %}em números{% else %}in numbers{% endif %}</p>
+    <p class="anotacao" style="color: var(--amarelo-cera)">{% if lang == 'pt' %}em mais de dez anos de carreira{% else %}over ten years of career{% endif %}</p>
     <dl class="numeros">
       <div><dt>{% if lang == 'pt' %}empresas atendidas{% else %}companies served{% endif %}</dt><dd>20+</dd></div>
       <div><dt>{% if lang == 'pt' %}em projetos de P&amp;D executados{% else %}in R&amp;D projects delivered{% endif %}</dt><dd>R$&nbsp;40M+</dd></div>
@@ -48,35 +48,22 @@
 <div class="pagina">
   <section class="secao">
     <div class="cabeca-secao">
-      <p class="anotacao">{% if lang == 'pt' %}três frentes{% else %}three fronts{% endif %}</p>
-      <h2 class="display">{% if lang == 'pt' %}O que eu faço{% else %}What I do{% endif %}</h2>
+      <p class="anotacao">{% if lang == 'pt' %}como a ARM pode ajudar{% else %}how ARM can help{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}Três ofertas, um método{% else %}Three offers, one method{% endif %}</h2>
     </div>
     <div class="retalhos">
-      <a class="ka-retalho" href="{{ p_cons.url | relative_url }}">
-        <div class="ka-retalho__estampa ka-estampa-cera"></div>
+      {%- for o in site.data.offers.offers %}
+      {%- assign ox = o[lang] %}
+      <a class="ka-retalho{% cycle '', ' ka-retalho--alt', '' %}" href="{{ p_cons.url | relative_url }}#ofertas">
+        <div class="ka-retalho__estampa ka-estampa-{{ o.estampa }}"></div>
         <div class="ka-retalho__corpo ka-grade">
-          <h3 class="ka-retalho__titulo">ARM Consulting</h3>
-          <p class="ka-retalho__texto">{% if lang == 'pt' %}Estratégia, governança, times de IA e projetos de P&amp;D, do estratégico ao técnico.{% else %}Strategy, governance, AI teams and R&amp;D projects, from the boardroom to the codebase.{% endif %}</p>
-          <p class="ka-retalho__nota">{{ site.data.services.size }} {% if lang == 'pt' %}serviços{% else %}services{% endif %}</p>
+          <h3 class="ka-retalho__titulo">{{ ox.title }}</h3>
+          <p class="ka-retalho__texto">{{ ox.for }}</p>
         </div>
       </a>
-      <a class="ka-retalho ka-retalho--alt" href="{{ p_res.url | relative_url }}">
-        <div class="ka-retalho__estampa ka-estampa-folha"></div>
-        <div class="ka-retalho__corpo ka-grade">
-          <h3 class="ka-retalho__titulo">{% if lang == 'pt' %}Pesquisa{% else %}Research{% endif %}</h3>
-          <p class="ka-retalho__texto">{% if lang == 'pt' %}Pós-doutorado em governança e ciclo de vida da IA, com publicações em visão computacional, ML e cibersegurança.{% else %}Postdoc on AI governance and lifecycle, with publications in computer vision, ML and cybersecurity.{% endif %}</p>
-          <p class="ka-retalho__nota">h-index {{ m.h_index }}</p>
-        </div>
-      </a>
-      <a class="ka-retalho" href="{{ p_talks.url | relative_url }}">
-        <div class="ka-retalho__estampa ka-estampa-jade"></div>
-        <div class="ka-retalho__corpo ka-grade">
-          <h3 class="ka-retalho__titulo">{% if lang == 'pt' %}Palestras{% else %}Talks{% endif %}</h3>
-          <p class="ka-retalho__texto">{% if lang == 'pt' %}Workshops e palestras sobre IA aplicada, governança e IA no trabalho jurídico.{% else %}Workshops and talks on applied AI, governance and AI in legal work.{% endif %}</p>
-          <p class="ka-retalho__nota">{{ site.data.talks.size }} {% if lang == 'pt' %}eventos{% else %}events{% endif %}</p>
-        </div>
-      </a>
+      {%- endfor %}
     </div>
+    <p class="home__metodo">{% if lang == 'pt' %}Todas as ofertas usam o mesmo método: <a class="ka-link" href="{{ p_cons.url | relative_url }}#metodo">portões de decisão auditáveis</a> ao longo do ciclo de vida da IA, nascidos da pesquisa de pós-doutorado e compatíveis com o NIST AI RMF.{% else %}All offers share one method: <a class="ka-link" href="{{ p_cons.url | relative_url }}#metodo">auditable decision gates</a> across the AI lifecycle, born from postdoctoral research and compatible with the NIST AI RMF.{% endif %}</p>
   </section>
 
   <section class="secao" style="padding-top: 0">
@@ -96,6 +83,7 @@
 
   <section class="secao credenciais" style="padding-top: 0">
     <p class="rotulo">{% if lang == 'pt' %}trajetória e parcerias{% else %}track record and partners{% endif %}</p>
+    <p class="home__pesquisa">{% if lang == 'pt' %}Pesquisa ativa em governança e ciclo de vida da IA, com {{ m.citations }} citações no Google Scholar. <a class="ka-link" href="{{ p_res.url | relative_url }}">Ver a pesquisa</a>{% else %}Active research on AI governance and the AI lifecycle, with {{ m.citations }} citations on Google Scholar. <a class="ka-link" href="{{ p_res.url | relative_url }}">See the research</a>{% endif %}</p>
     <ul class="marcas">
       <li>Starian</li><li>Fundação CERTI</li><li>GPAI</li><li>PSafe</li><li>Instituto SENAI</li><li>UFSC</li><li>ÉTS Montréal</li><li>Halmstad University</li><li>Linköping University</li><li>Inovativa Brasil</li>
     </ul>

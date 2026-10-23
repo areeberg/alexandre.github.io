@@ -14,7 +14,6 @@
       {%- endif %}
       {%- endfor %}
       <a class="tema" href="{{ alt.url | relative_url }}" lang="{% if outra == 'pt' %}pt-BR{% else %}en{% endif %}" hreflang="{% if outra == 'pt' %}pt-BR{% else %}en{% endif %}" aria-label="{{ t.switch_label }}">{{ t.switch_short }}</a>
-      <button id="tema" class="tema" type="button">{{ t.theme }}</button>
       <a class="ka-botao ka-botao--domingo" href="#contato">{{ t.contact }}</a>
     </nav>
   </div>

@@ -279,6 +279,60 @@ a { color: inherit; }
 [data-theme="escuro"] .linha-tempo__org { color: var(--grafite); }
 .texto-corrido p { margin: 0 0 var(--esp-16); }
 
+.home__metodo { margin: var(--esp-48) 0 0; max-width: 70ch; font: 400 18px/28px var(--font-sans); color: var(--grafite); }
+.home__pesquisa { margin: var(--esp-8) 0 0; color: var(--grafite); }
+
+/* ---------- Consultoria ---------- */
+.selos { list-style: none; margin: 0; padding: var(--esp-24); display: grid; gap: var(--esp-16); align-self: center; background: var(--papel-alto); border: var(--traco-1) solid var(--linha-fina); }
+.selos li { font: 400 15px/22px var(--font-sans); color: var(--grafite); padding-left: var(--esp-24); position: relative; }
+.selos li::before { content: ""; position: absolute; left: 0; top: 8px; width: 10px; height: 7px; border-radius: var(--raio-oval); background: var(--buzio); }
+.selos b { color: var(--tinta); }
+
+.ofertas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--esp-32); }
+.oferta { background: var(--papel-alto); color: var(--tinta); display: flex; flex-direction: column; }
+.oferta__faixa { height: 32px; }
+.oferta__corpo { padding: var(--esp-24); position: relative; }
+.oferta__num { position: absolute; top: var(--esp-16); right: var(--esp-24); font: 400 40px/1 var(--font-display); color: var(--linha-fina); }
+.oferta h3 { margin: 0 0 var(--esp-16); padding-right: var(--esp-48); }
+.oferta__para { margin: 0 0 var(--esp-16); font: 400 15px/22px var(--font-sans); color: var(--grafite); }
+.oferta__para .rotulo { color: var(--tinta); margin-right: var(--esp-4); }
+.oferta__rotulo { margin: 0 0 var(--esp-12); }
+.oferta .lista-marcada { gap: var(--esp-8); font: 400 15px/22px var(--font-sans); }
+.ofertas__tambem { margin: var(--esp-32) 0 0; color: var(--linha-fina); }
+.ofertas__tambem .rotulo { color: var(--amarelo-cera); margin-right: var(--esp-8); }
+[data-theme="escuro"] .ofertas__tambem { color: var(--grafite); }
+
+.metodo .duas-colunas p { margin-top: 0; }
+.portoes { list-style: none; margin: var(--esp-48) 0 var(--esp-32); padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); counter-reset: portao; }
+.portoes li { counter-increment: portao; position: relative; padding: var(--esp-24) var(--esp-16) var(--esp-16); background: var(--papel-alto); border: var(--traco-1) solid var(--linha-fina); border-left: 0; font: 600 15px/20px var(--font-sans); }
+.portoes li:first-child { border-left: var(--traco-1) solid var(--linha-fina); }
+.portoes li::before { content: counter(portao); display: block; font: 400 32px/1 var(--font-display); color: var(--linha); margin-bottom: var(--esp-8); }
+.portoes li + li::after { content: ""; position: absolute; left: -9px; top: 50%; width: 16px; height: 16px; margin-top: -8px; background: var(--vermelho-domingo); transform: rotate(45deg); }
+.regras { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--esp-24) var(--esp-32); }
+.regras li { padding-top: var(--esp-16); border-top: var(--traco-2) solid var(--tinta); color: var(--grafite); }
+.regras b { display: block; color: var(--tinta); font: 600 18px/24px var(--font-sans); margin-bottom: var(--esp-4); }
+
+.casos-estruturados { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--esp-32); }
+.caso-e { padding: var(--esp-32); background: var(--papel-alto); border: var(--traco-1) solid var(--linha-fina); display: flex; flex-direction: column; gap: var(--esp-16); }
+.caso-e__topo .titulo-1 { margin: var(--esp-12) 0 0; }
+.caso-e__passos { margin: 0; display: grid; gap: var(--esp-16); }
+.caso-e__passos dt { font: 600 12px/16px var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: var(--esp-4); }
+.caso-e__passos dd { margin: 0; color: var(--grafite); }
+.caso-e__citacao { margin: 0; padding-left: var(--esp-16); border-left: var(--traco-2) solid var(--buzio); font: 400 20px/1.3 var(--font-display); }
+.caso-e__citacao p { margin: 0 0 var(--esp-8); }
+.caso-e__citacao footer { font: 400 12px/16px var(--font-sans); color: var(--grafite); }
+.caso-e .ka-link { margin-top: auto; }
+.startups { margin: var(--esp-32) 0 0; }
+.startups .rotulo { margin-right: var(--esp-8); }
+
+.faq__lista { display: grid; border-top: var(--traco-1) solid var(--linha); max-width: 860px; }
+.faq__item { border-bottom: var(--traco-1) solid var(--linha); padding: var(--esp-16) 0; }
+.faq__item summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: var(--esp-16); }
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after { content: "+"; font: 400 28px/1 var(--font-display); color: var(--vermelho-domingo); }
+.faq__item[open] summary::after { content: "–"; }
+.faq__item p { margin: var(--esp-12) 0 0; color: var(--grafite); max-width: 70ch; }
+
 /* ---------- Currículo ---------- */
 .cv { padding-top: var(--esp-64); padding-bottom: var(--esp-96); }
 .cv__topo { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--esp-24); flex-wrap: wrap; padding-bottom: var(--esp-48); border-bottom: var(--traco-2) solid var(--tinta); }
@@ -341,6 +395,13 @@ a { color: inherit; }
   .cv__item, .cv__compacta li { grid-template-columns: 1fr; gap: var(--esp-4); }
   .cv__destaques { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cv__lista--colunas { columns: 1; }
+  .ofertas, .casos-estruturados, .regras { grid-template-columns: 1fr; }
+  .portoes { grid-template-columns: 1fr; }
+  .portoes li { border-left: var(--traco-1) solid var(--linha-fina); border-top: 0; display: flex; gap: var(--esp-16); align-items: baseline; padding: var(--esp-16); }
+  .portoes li:first-child { border-top: var(--traco-1) solid var(--linha-fina); }
+  .portoes li::before { margin: 0; }
+  .portoes li + li::after { left: 50%; top: -9px; margin: 0 0 0 -8px; }
+  .caso-e { padding: var(--esp-24); }
   .hero__colagem:has(.retrato) { height: 320px; }
   .retrato { width: 230px; right: var(--esp-16); }
   .retrato__laje { width: 180px; height: 290px; top: 30px; }

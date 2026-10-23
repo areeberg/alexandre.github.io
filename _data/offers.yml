@@ -1,0 +1,66 @@
+# Ofertas da ARM Consulting. Cada uma diz para quem é e o que o cliente recebe.
+offers:
+  - id: governance
+    estampa: folha
+    en:
+      title: AI governance assessment
+      for: "Companies that already use AI, or are about to, in products and processes, and need answers for clients, audits or regulators."
+      deliverables:
+        - Inventory of the AI systems in use and in development
+        - AI maturity assessment across the lifecycle
+        - Gaps against the NIST AI RMF and the EU AI Act
+        - Prioritised action plan with objective stage-gate criteria
+    pt:
+      title: Diagnóstico de governança de IA
+      for: "Empresas que já usam IA, ou vão usar, em produtos e processos, e precisam responder a clientes, auditorias ou à regulação."
+      deliverables:
+        - Inventário dos sistemas de IA em uso e em desenvolvimento
+        - Avaliação de maturidade de IA ao longo do ciclo de vida
+        - Lacunas frente ao NIST AI RMF e ao EU AI Act
+        - Plano de ação priorizado, com critérios objetivos de stage-gate
+  - id: rnd
+    estampa: cera
+    en:
+      title: Funded AI R&D project
+      for: "Companies with an AI idea that needs funding, technical rigour and the right research partners."
+      deliverables:
+        - Scope and technical architecture of the solution
+        - Work plan with deliverables, indicators and team
+        - Proposal for FINEP, Lei da Informática or Lei do Bem
+        - Matchmaking with partner research institutes (ICTs)
+    pt:
+      title: Projeto de P&D em IA financiado
+      for: "Empresas com uma ideia de IA que precisa de recursos, rigor técnico e dos parceiros de pesquisa certos."
+      deliverables:
+        - Escopo e arquitetura técnica da solução
+        - Plano de trabalho com entregáveis, indicadores e equipe
+        - Proposta para FINEP, Lei da Informática ou Lei do Bem
+        - Matchmaking com ICTs parceiras
+  - id: fractional
+    estampa: jade
+    en:
+      title: Fractional Head of AI
+      for: "Teams that need senior AI leadership without hiring a full-time head of AI yet."
+      deliverables:
+        - Recurring follow-up and technical review of AI deliveries
+        - Assessment of vendors, tools and proposed solutions
+        - Technical interviews and hiring of the AI team
+        - Strategic guidance for leadership on AI priorities and risks
+    pt:
+      title: Head de IA sob demanda
+      for: "Times que precisam de liderança sênior em IA sem contratar, ainda, um head de IA em tempo integral."
+      deliverables:
+        - Acompanhamento recorrente e revisão técnica das entregas de IA
+        - Avaliação de fornecedores, ferramentas e soluções propostas
+        - Entrevistas técnicas e contratação do time de IA
+        - Orientação estratégica à liderança sobre prioridades e riscos de IA
+
+also:
+  en:
+    - AI strategy and roadmap
+    - Scientific consulting (papers, master's and PhD work in applied AI)
+    - In-company workshops and training
+  pt:
+    - Estratégia e roadmap de IA
+    - Consultoria científica (artigos, mestrado e doutorado em IA aplicada)
+    - Workshops e treinamentos in company

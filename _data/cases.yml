@@ -1,0 +1,26 @@
+# Casos da ARM. "result" e "quote" são opcionais: preencha quando tiver resultado e depoimento.
+# quote: { text: "...", author: "Nome", role: "Cargo, Empresa" }
+cases:
+  - org: Fundação CERTI
+    kind: { en: Consulting, pt: Consultoria }
+    url: https://certi.org.br/inteligencia-artificial/
+    en:
+      challenge: Structure a new AI R&D project and build the team to deliver it.
+      done: "R&D project writing, scientific guidance on methods and the AI lifecycle, and technical assessments and interviews to hire data engineers and AI developers."
+    pt:
+      challenge: Estruturar um novo projeto de P&D em IA e formar o time para executá-lo.
+      done: "Escrita do projeto de P&D, orientação científica sobre métodos e ciclo de vida da IA, e avaliações técnicas e entrevistas para contratar engenheiros de dados e desenvolvedores de IA."
+  - org: OAB Subseção Juína
+    kind: { en: Workshop, pt: Workshop }
+    url: ""
+    en:
+      challenge: Prepare local lawyers to use AI in their daily work safely and within professional rules.
+      done: "Hands-on workshop \"AI in legal work\": contracts, case-file chronologies, devil's-advocate review of briefs, citation checking, ethics and LGPD."
+    pt:
+      challenge: Preparar a advocacia local para usar IA no dia a dia com segurança e dentro das regras da profissão.
+      done: "Workshop prático \"IA no trabalho jurídico\": contratos, cronologia de acervo, advogado do diabo da própria peça, checagem de citações, ética e LGPD."
+
+startups:
+  - { name: Dokbot, url: "https://www.dokbot.ai/" }
+  - { name: AprovaAI, url: "https://aprova.ai/" }
+  - { name: IANA Tecnologia, url: "http://www.ianatecnologia.com.br/" }

@@ -1,49 +1,141 @@
 {%- assign lang = page.lang -%}
+{%- assign of = site.data.offers -%}
+{%- assign cs = site.data.cases -%}
+{%- assign pg = site.pages | where: "lang", lang -%}
+{%- assign p_talks = pg | where: "ref", "talks" | first -%}
 <div class="pagina">
   <section class="hero hero--curto">
     <div class="hero__texto">
       <p class="anotacao">ARM Consulting</p>
       {% if lang == 'pt' %}
       <h1 class="display">Consultoria em IA, do estratégico ao técnico.</h1>
-      <p>A ARM Consulting ajuda empresas a construir, avaliar e escalar projetos de Inteligência Artificial com rigor técnico e visão de negócio. Da estratégia ao time, da governança ao laboratório: projetos que evoluem de prova de conceito para produção, com governança, o time certo e o financiamento adequado.</p>
+      <p>A ARM Consulting ajuda empresas a decidir onde aplicar IA, montar o time certo, captar recursos e governar cada projeto até a produção, com rigor técnico e visão de negócio.</p>
       {% else %}
       <h1 class="display">AI consulting, from strategy to code.</h1>
-      <p>ARM Consulting helps companies build, assess and scale Artificial Intelligence projects with technical rigour and business sense. From strategy to team, from governance to the lab: projects that move from proof of concept to production, with governance, the right team and the right funding.</p>
+      <p>ARM Consulting helps companies decide where to apply AI, build the right team, secure funding and govern each project all the way to production, with technical rigour and business sense.</p>
       {% endif %}
       <a class="ka-botao ka-botao--domingo" href="#contato">{% if lang == 'pt' %}Agendar uma conversa{% else %}Book a conversation{% endif %}</a>
+      <a class="ka-botao ka-botao--fantasma" href="#ofertas">{% if lang == 'pt' %}Ver as ofertas{% else %}See the offers{% endif %}</a>
     </div>
-    <div class="hero__colagem hero__colagem--baixa" aria-hidden="true">
-      <div class="hero__laje"></div>
-      <div class="hero__cera ka-estampa-folha"></div>
-    </div>
+    <ul class="selos" aria-label="{% if lang == 'pt' %}Credenciais{% else %}Credentials{% endif %}">
+      {% if lang == 'pt' %}
+      <li><b>Doutor</b> em Inteligência Artificial (UFSC e ÉTS)</li>
+      <li><b>Especialista em IA</b> do GPAI, Global Partnership on AI</li>
+      <li><b>Ex-head de IA</b> da Fundação CERTI</li>
+      <li><b>3 patentes</b> concedidas em vários países</li>
+      {% else %}
+      <li><b>PhD</b> in Artificial Intelligence (UFSC and ÉTS)</li>
+      <li><b>AI Expert</b> at GPAI, the Global Partnership on AI</li>
+      <li><b>Former Head of AI</b> at Fundação CERTI</li>
+      <li><b>3 patents</b> granted in several countries</li>
+      {% endif %}
+    </ul>
   </section>
 </div>
 
-<section class="faixa">
+<section class="faixa" id="ofertas">
   <div class="pagina">
     <div class="cabeca-secao">
-      <p class="anotacao" style="color: var(--amarelo-cera)">{% if lang == 'pt' %}serviços{% else %}services{% endif %}</p>
-      <h2 class="display">{% if lang == 'pt' %}O que a ARM entrega{% else %}What ARM delivers{% endif %}</h2>
+      <p class="anotacao" style="color: var(--amarelo-cera)">{% if lang == 'pt' %}ofertas{% else %}offers{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}Três formas de trabalhar com a ARM{% else %}Three ways to work with ARM{% endif %}</h2>
     </div>
-    <ol class="servicos">
-      {%- for s in site.data.services %}
-      {%- assign sx = s[lang] %}
-      <li class="servico">
-        <span class="servico__num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
-        <div class="servico__faixa ka-estampa-{{ s.estampa }}" aria-hidden="true"></div>
-        <h3 class="titulo-3">{{ sx.title }}</h3>
-        <p class="corpo-sm">{{ sx.text }}</p>
-      </li>
+    <div class="ofertas">
+      {%- for o in of.offers %}
+      {%- assign ox = o[lang] %}
+      <article class="oferta">
+        <div class="oferta__faixa ka-estampa-{{ o.estampa }}" aria-hidden="true"></div>
+        <div class="oferta__corpo">
+          <span class="oferta__num">{{ forloop.index | prepend: '0' }}</span>
+          <h3 class="titulo-2">{{ ox.title }}</h3>
+          <p class="oferta__para"><span class="rotulo">{% if lang == 'pt' %}Para{% else %}For{% endif %}</span> {{ ox.for }}</p>
+          <p class="rotulo oferta__rotulo">{% if lang == 'pt' %}Você recebe{% else %}You receive{% endif %}</p>
+          <ul class="lista-marcada">
+            {%- for d in ox.deliverables %}<li>{{ d }}</li>{% endfor %}
+          </ul>
+        </div>
+      </article>
       {%- endfor %}
-    </ol>
+    </div>
+    <p class="ofertas__tambem"><span class="rotulo">{% if lang == 'pt' %}Também fazemos{% else %}We also do{% endif %}</span> {{ of.also[lang] | join: " · " }}</p>
   </div>
 </section>
 
 <div class="pagina">
-  <section class="secao duas-colunas">
+  <section class="secao metodo" id="metodo">
+    <div class="duas-colunas">
+      <div>
+        <p class="anotacao">{% if lang == 'pt' %}o método{% else %}the method{% endif %}</p>
+        <h2 class="display" style="margin-top: var(--esp-8)">{% if lang == 'pt' %}Portões de decisão auditáveis{% else %}Auditable decision gates{% endif %}</h2>
+      </div>
+      <div>
+        {% if lang == 'pt' %}
+        <p>O NIST AI RMF diz o que a governança de risco de IA deve alcançar, mas não como chegar lá em cada etapa de um projeto. O método da ARM reúne o ciclo de vida de IA, os níveis de prontidão técnica (MLTRL) e a maturidade de MLOps em uma única referência auditável, e transforma isso em um procedimento de portão objetivo.</p>
+        <p>É o resultado da pesquisa de pós-doutorado na UFSC e foi apresentado no <a class="ka-link" href="{{ p_talks.url | relative_url }}">Data Science Summit 2026</a>.</p>
+        {% else %}
+        <p>The NIST AI RMF says what AI risk governance must achieve, but not how to get there at each stage of a project. ARM's method brings the AI lifecycle, technology readiness levels (MLTRL) and MLOps maturity together in a single auditable reference, and turns it into an objective gate procedure.</p>
+        <p>It comes from postdoctoral research at UFSC and was presented at the <a class="ka-link" href="{{ p_talks.url | relative_url }}">Data Science Summit 2026</a>.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <ol class="portoes" aria-label="{% if lang == 'pt' %}Etapas e portões do ciclo de vida{% else %}Lifecycle stages and gates{% endif %}">
+      {% if lang == 'pt' %}
+      <li>Pesquisa</li><li>Prova de conceito</li><li>Protótipo</li><li>Piloto</li><li>Produção</li>
+      {% else %}
+      <li>Research</li><li>Proof of concept</li><li>Prototype</li><li>Pilot</li><li>Production</li>
+      {% endif %}
+    </ol>
+
+    <ul class="regras">
+      {% if lang == 'pt' %}
+      <li><b>Cinco elementos por portão.</b> Cada etapa tem os critérios que decidem se o projeto está pronto para avançar.</li>
+      <li><b>Componente mais fraco.</b> A nota do projeto é a do seu ponto mais frágil, para que uma média não esconda o risco real.</li>
+      <li><b>Decisão explícita.</b> Avançar, revisar ou interromper, com a evidência registrada para auditoria.</li>
+      <li><b>Junto com o NIST AI RMF.</b> O RMF orienta a governança em alto nível; o método vira critério de decisão no dia a dia dos times.</li>
+      {% else %}
+      <li><b>Five elements per gate.</b> Each stage has the criteria that decide whether the project is ready to move on.</li>
+      <li><b>Weakest component.</b> A project scores as its weakest point, so an average never hides the real risk.</li>
+      <li><b>Explicit decision.</b> Advance, review or stop, with the evidence recorded for audit.</li>
+      <li><b>Alongside the NIST AI RMF.</b> The RMF guides high-level governance; the method turns it into decision criteria for the teams.</li>
+      {% endif %}
+    </ul>
+  </section>
+
+  <section class="secao" style="padding-top: 0">
+    <div class="cabeca-secao">
+      <p class="anotacao">{% if lang == 'pt' %}casos{% else %}cases{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}O que já fizemos{% else %}What we have done{% endif %}</h2>
+    </div>
+    <div class="casos-estruturados">
+      {%- for c in cs.cases %}
+      {%- assign cx = c[lang] %}
+      <article class="caso-e">
+        <div class="caso-e__topo">
+          <span class="ka-buzio">{{ c.kind[lang] }}</span>
+          <h3 class="titulo-1">{{ c.org }}</h3>
+        </div>
+        <dl class="caso-e__passos">
+          <div><dt>{% if lang == 'pt' %}Desafio{% else %}Challenge{% endif %}</dt><dd>{{ cx.challenge }}</dd></div>
+          <div><dt>{% if lang == 'pt' %}O que fizemos{% else %}What we did{% endif %}</dt><dd>{{ cx.done }}</dd></div>
+          {%- if cx.result %}<div><dt>{% if lang == 'pt' %}Resultado{% else %}Result{% endif %}</dt><dd>{{ cx.result }}</dd></div>{% endif %}
+        </dl>
+        {%- if cx.quote %}
+        <blockquote class="caso-e__citacao"><p>“{{ cx.quote.text }}”</p><footer>{{ cx.quote.author }}, {{ cx.quote.role }}</footer></blockquote>
+        {%- endif %}
+        {%- if c.url != "" %}<a class="ka-link" href="{{ c.url }}" target="_blank" rel="noopener">{{ c.url | remove: "https://" | remove: "http://" | split: "/" | first }}</a>{% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="startups"><span class="rotulo">{% if lang == 'pt' %}Startups apoiadas{% else %}Startups supported{% endif %}</span>
+      {%- for s in cs.startups %} <a class="ka-link" href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% unless forloop.last %} ·{% endunless %}{% endfor %}
+    </p>
+  </section>
+
+  <section class="secao duas-colunas" style="padding-top: 0">
     <div>
-      <p class="anotacao">{% if lang == 'pt' %}credenciais{% else %}credentials{% endif %}</p>
-      <h2 class="titulo-1" style="margin-top: var(--esp-8)">{% if lang == 'pt' %}Dez anos de P&amp;D em IA aplicada{% else %}Ten years of applied AI R&amp;D{% endif %}</h2>
+      <p class="anotacao">{% if lang == 'pt' %}trajetória{% else %}track record{% endif %}</p>
+      <h2 class="titulo-1" style="margin-top: var(--esp-8)">{% if lang == 'pt' %}Mais de dez anos de P&amp;D em IA aplicada{% else %}Over ten years of applied AI R&amp;D{% endif %}</h2>
+      <p class="legenda" style="margin-top: var(--esp-16)">{% if lang == 'pt' %}Números acumulados na carreira de Alexandre Reeberg de Mello, em instituições como Fundação CERTI, Instituto SENAI e PSafe.{% else %}Figures from Alexandre Reeberg de Mello's career, at institutions such as Fundação CERTI, Instituto SENAI and PSafe.{% endif %}</p>
     </div>
     <ul class="lista-marcada">
       {% if lang == 'pt' %}
@@ -66,38 +158,18 @@
     </ul>
   </section>
 
-  <section class="secao" style="padding-top: 0">
+  <section class="secao faq" style="padding-top: 0">
     <div class="cabeca-secao">
-      <p class="anotacao">{% if lang == 'pt' %}casos{% else %}cases{% endif %}</p>
-      <h2 class="display">{% if lang == 'pt' %}Com quem trabalhamos{% else %}Who we work with{% endif %}</h2>
+      <p class="anotacao">{% if lang == 'pt' %}perguntas frequentes{% else %}frequently asked questions{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}Antes de contratar{% else %}Before you hire{% endif %}</h2>
     </div>
-    <div class="casos">
-      <article class="caso caso--destaque">
-        <p class="rotulo">{% if lang == 'pt' %}Consultoria{% else %}Consulting{% endif %}</p>
-        <h3 class="titulo-1">Fundação CERTI</h3>
-        <p>{% if lang == 'pt' %}Escrita de projeto de P&amp;D, orientação científica, seleção técnica e formação do time de IA e engenharia de dados.{% else %}R&amp;D project writing, scientific guidance, technical hiring and building the AI and data engineering team.{% endif %}</p>
-        <a class="ka-link" href="https://certi.org.br/inteligencia-artificial/" target="_blank" rel="noopener">certi.org.br</a>
-      </article>
-      <article class="caso">
-        <p class="rotulo">{% if lang == 'pt' %}Consultoria{% else %}Consulting{% endif %}</p>
-        <h3 class="titulo-3">OAB · {% if lang == 'pt' %}Subseção Juína{% else %}Juína Chapter{% endif %}</h3>
-        <p class="corpo-sm">{% if lang == 'pt' %}Ordem dos Advogados do Brasil, Juína (MT). Workshop "IA no trabalho jurídico" para a advocacia local.{% else %}Brazilian Bar Association, Juína (MT). "AI in legal work" workshop for local lawyers.{% endif %}</p>
-      </article>
-      <article class="caso">
-        <p class="rotulo">Startup</p>
-        <h3 class="titulo-3">Dokbot</h3>
-        <a class="ka-link" href="https://www.dokbot.ai/" target="_blank" rel="noopener">dokbot.ai</a>
-      </article>
-      <article class="caso">
-        <p class="rotulo">Startup</p>
-        <h3 class="titulo-3">AprovaAI</h3>
-        <a class="ka-link" href="https://aprova.ai/" target="_blank" rel="noopener">aprova.ai</a>
-      </article>
-      <article class="caso">
-        <p class="rotulo">Startup</p>
-        <h3 class="titulo-3">IANA Tecnologia</h3>
-        <a class="ka-link" href="http://www.ianatecnologia.com.br/" target="_blank" rel="noopener">ianatecnologia.com.br</a>
-      </article>
+    <div class="faq__lista">
+      {%- for f in site.data.faq %}
+      <details class="faq__item"{% if forloop.first %} open{% endif %}>
+        <summary class="titulo-3">{{ f[lang].q }}</summary>
+        <p>{{ f[lang].a }}</p>
+      </details>
+      {%- endfor %}
     </div>
   </section>
 
@@ -107,6 +179,6 @@
     {% else %}
     <p class="titulo-1">Building AI capability in-house, assessing an R&amp;D project, or need a technical second opinion?</p>
     {% endif %}
-    <a class="ka-botao" href="mailto:{{ site.data.links.email }}?subject=ARM%20Consulting">{% if lang == 'pt' %}Escrever para a ARM{% else %}Write to ARM{% endif %}</a>
+    <a class="ka-botao ka-botao--domingo" href="#contato">{% if lang == 'pt' %}Agendar uma conversa{% else %}Book a conversation{% endif %}</a>
   </section>
 </div>
