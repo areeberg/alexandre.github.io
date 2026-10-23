@@ -1,17 +1,19 @@
-# Palestras e workshops. Os itens marcados com "# CONFIRMAR" precisam de título e data reais.
+# Palestras, workshops e treinamentos, do mais recente para o mais antigo.
+# date: AAAA-MM (deixe vazio se ainda não souber). status: upcoming | delivered.
+# Itens com "# CONFIRMAR" ainda precisam de dado real.
 - id: dss-curitiba-2026
   status: upcoming
   date: 2026-10
-  event: Data Science Summit
+  event: Data Science Summit 2026
   city: Curitiba, PR
   en:
     kind: Talk
-    title: "[Talk title to confirm]"
-    text: "[One-sentence summary of the talk.]"
+    title: "Corporate Governance: a method to operationalise the NIST AI RMF in AI stage-gate decisions"
+    text: "The NIST AI RMF describes what AI risk governance must achieve, but not how to get there at each stage of a project. This talk presents Governança Corporativa, an instrument that brings together the AI lifecycle, MLTRL (technology readiness levels) and MLOps maturity in a single auditable reference. The result is an objective gate procedure: for each stage, the method defines the five elements that decide whether an AI project is ready to move on, and a weakest-component rule keeps an average from masking the system's real risk. It does not replace the NIST AI RMF; the two are used together, one for high-level governance and the other to turn that governance into objective decision criteria across the AI lifecycle, so the organisation can decide, in an auditable way, when to advance, review or stop an AI initiative."
   pt:
     kind: Palestra
-    title: "[Título da palestra a confirmar]"
-    text: "[Resumo da palestra em uma frase.]"
+    title: "Governança Corporativa: um método para operacionalizar o NIST AI RMF em decisões de stage-gate de IA"
+    text: "O NIST AI RMF descreve o que a governança de risco de IA deve alcançar, mas não especifica como chegar lá em cada estágio de um projeto. Esta palestra apresenta o Governança Corporativa, um instrumento que reúne o ciclo de vida de IA, o MLTRL (níveis de prontidão técnica) e a maturidade MLOps em uma única referência auditável. O resultado é um procedimento de portão objetivo: para cada estágio, o método define os cinco elementos que decidem se um projeto de IA está pronto para avançar, e a regra do componente mais fraco evita que uma média mascare o risco real do sistema. A proposta não substitui o NIST AI RMF: os dois são usados em conjunto, um para a governança em alto nível e outro para transformar essa governança em critérios objetivos de decisão ao longo do ciclo de vida, para que a organização decida, de forma auditável, quando avançar, revisar ou interromper uma iniciativa de IA."
 - id: workshop-ia-juridico
   status: delivered
   date: 2026-10
@@ -43,13 +45,52 @@
 - id: proudtech-2026
   status: delivered
   date: 2026-09
-  event: ProudTech 2026
+  event: ProudTech Summit 2026
   city: Florianópolis, SC
   en:
     kind: Talk
-    title: "[Talk title to confirm]"
-    text: "[One-sentence summary of the talk.]"
+    title: ""   # CONFIRMAR: título da palestra (o deck está no SharePoint da Starian)
+    text: ""
   pt:
     kind: Palestra
-    title: "[Título da palestra a confirmar]"
-    text: "[Resumo da palestra em uma frase.]"
+    title: ""
+    text: ""
+- id: seminfo-ufsc-2026
+  status: delivered
+  date: 2026-08
+  event: "Seminfo, I Semana Acadêmica de Ciência da Informação, UFSC"
+  city: Florianópolis, SC
+  en:
+    kind: Talk
+    title: How does AI learn?
+    text: The principles that make machine learning possible, for the students of the first Information Science academic week at UFSC.
+  pt:
+    kind: Palestra
+    title: Como a IA aprende?
+    text: Os princípios que tornam o aprendizado de máquina possível, para os estudantes da primeira Semana Acadêmica de Ciência da Informação da UFSC.
+- id: tdc-florianopolis-2026
+  status: delivered
+  date: ""   # CONFIRMAR: mês da edição de Florianópolis
+  event: TDC Florianópolis 2026
+  city: Florianópolis, SC
+  en:
+    kind: Talk
+    title: "Strategic AI Management: from Plan to Results with People and GenAI"
+    text: "How to structure and operationalise an AI strategic plan aligned with the company's goals. A complete, repeatable flow: from the macro AI plan to team and individual OKRs refined with the team, through a personal SWOT analysis, development plans tied to the goals and follow-up in 1:1s supported by AI agents, with AI Skills accelerating each step. The session closes with a public repository of all the examples and Skills, ready to apply to your own team."
+  pt:
+    kind: Palestra
+    title: "Gestão Estratégica de IA: do Plano aos Resultados com Pessoas e GenAI"
+    text: "Como estruturar e operacionalizar um plano estratégico de IA alinhado aos objetivos da empresa. Um fluxo completo e replicável: do plano macro de IA aos OKRs de time e individuais, refinados com a equipe, passando por análise SWOT pessoal, PDIs conectados às metas e acompanhamento via 1:1s com suporte de agentes de IA, com Skills de IA acelerando cada etapa. Ao final, um repositório público com todos os exemplos e Skills para aplicar diretamente na sua equipe."
+- id: engie-fundamentos-ia
+  status: delivered
+  date: ""   # CONFIRMAR: mês e ano do treinamento
+  event: Engie
+  city: ""
+  en:
+    kind: Training
+    title: AI fundamentals
+    text: An in-company training on the fundamentals of artificial intelligence for Engie teams.
+  pt:
+    kind: Treinamento
+    title: Fundamentos da IA
+    text: Treinamento in company sobre os fundamentos da inteligência artificial para equipes da Engie.

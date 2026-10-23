@@ -201,12 +201,15 @@ a { color: inherit; }
 .hero__texto .ka-botao { margin: 0 var(--esp-8) var(--esp-8) 0; }
 .hero--curto { padding-bottom: var(--esp-64); }
 .hero__colagem--baixa { height: 300px; }
-/* Retrato: na colagem vira fotocópia (cinza, contraste alto); na página Sobre fica em cor. */
-.retrato { position: absolute; top: 0; right: var(--esp-24); width: 280px; margin: 0; background: var(--xerox); border: var(--traco-1) solid var(--xerox); }
-.retrato img { width: 100%; height: auto; filter: grayscale(1) contrast(1.15); }
-.hero__oval--retrato { top: auto; bottom: 8px; right: -8px; width: 112px; height: 84px; }
-.hero__cera--retrato { bottom: -24px; right: 232px; width: 120px; height: 120px; }
-.retrato-sobre { margin: var(--esp-32) 0 0; max-width: 320px; border: var(--traco-1) solid var(--linha-fina); background: var(--papel-alto); padding: var(--esp-12) var(--esp-12) var(--esp-24); transform: rotate(var(--inclinacao-1)); }
+/* Retrato recortado, colado sobre uma laje de fotocópia e o oval de búzio. */
+.hero__colagem:has(.retrato) { height: 420px; }
+.retrato__laje { position: absolute; top: 40px; right: 0; width: 240px; height: 380px; background: var(--xerox); }
+.retrato { position: absolute; bottom: 0; right: var(--esp-32); width: 300px; margin: 0; }
+.retrato img { width: 100%; height: auto; display: block; }
+.hero__oval--retrato { top: 8px; right: 200px; width: 150px; height: 112px; }
+.hero__cera--retrato { bottom: -16px; right: 268px; width: 112px; height: 112px; }
+.hero__colagem:has(.retrato) .selo { top: auto; bottom: 120px; left: var(--esp-16); z-index: 1; }
+.retrato-sobre { margin: var(--esp-32) 0 0; max-width: 320px; border: var(--traco-1) solid var(--linha-fina); padding: var(--esp-24) var(--esp-12) 0; transform: rotate(var(--inclinacao-1)); }
 .retrato-sobre img { width: 100%; height: auto; }
 .selo { position: absolute; left: 8%; top: 24px; width: 120px; height: 120px; border-radius: var(--raio-oval); background: var(--amarelo-cera); color: var(--on-cera); transform: rotate(var(--inclinacao-3)); display: flex; flex-direction: column; align-items: center; justify-content: center; font: 600 12px/16px var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; text-align: center; border: var(--traco-2) solid var(--xerox); }
 .selo span:first-child { font: 400 32px/1 var(--font-display); letter-spacing: 0; text-transform: none; }
@@ -291,10 +294,12 @@ a { color: inherit; }
   .metricas dd { font-size: 44px; }
   .marca span { display: none; }
   .cabecalho { position: static; }
-  .hero__colagem:has(.retrato) { height: 300px; }
-  .retrato { width: 210px; right: var(--esp-16); }
-  .hero__oval--retrato { width: 84px; height: 64px; right: 0; }
-  .hero__cera--retrato { width: 88px; height: 88px; right: 180px; bottom: -8px; }
+  .hero__colagem:has(.retrato) { height: 320px; }
+  .retrato { width: 230px; right: var(--esp-16); }
+  .retrato__laje { width: 180px; height: 290px; top: 30px; }
+  .hero__oval--retrato { width: 104px; height: 78px; right: 150px; }
+  .hero__cera--retrato { width: 80px; height: 80px; right: 200px; bottom: -8px; }
+  .hero__colagem:has(.retrato) .selo { bottom: 90px; }
   .retrato-sobre { max-width: 260px; }
   .pagina { padding: 0 var(--esp-16); }
   .display-xl { font-size: 64px; }
