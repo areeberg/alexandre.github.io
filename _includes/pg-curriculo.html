@@ -1,0 +1,115 @@
+{%- assign lang = page.lang -%}
+{%- assign cv = site.data.cv -%}
+{%- assign pub = site.data.publications -%}
+{%- assign l = site.data.links -%}
+<div class="pagina cv">
+  <header class="cv__topo">
+    <div>
+      <p class="anotacao">curriculum vitae</p>
+      <h1 class="display">Alexandre Reeberg de Mello</h1>
+      <p class="cv__titulo">{{ cv.headline[lang] }}</p>
+      <ul class="cv__contato">
+        <li>{{ cv.location[lang] }}</li>
+        <li><a class="ka-link" href="mailto:{{ l.email }}">{{ l.email }}</a></li>
+        <li><a class="ka-link" href="{{ l.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="ka-link" href="{{ l.scholar }}" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a class="ka-link" href="{{ l.orcid }}" target="_blank" rel="noopener">ORCID 0000-0003-3130-5328</a></li>
+      </ul>
+    </div>
+    <button class="ka-botao ka-botao--fantasma cv__imprimir" type="button" onclick="window.print()">{% if lang == 'pt' %}Imprimir ou salvar PDF{% else %}Print or save as PDF{% endif %}</button>
+  </header>
+
+  <section class="cv__secao">
+    <h2 class="cv__rotulo">{% if lang == 'pt' %}Resumo{% else %}Summary{% endif %}</h2>
+    <div>
+      <p class="cv__resumo">{{ cv.summary[lang] }}</p>
+      <dl class="cv__destaques">
+        {%- for h in cv.highlights %}
+        <div><dt>{{ h[lang] }}</dt><dd>{{ h.value }}</dd></div>
+        {%- endfor %}
+      </dl>
+    </div>
+  </section>
+
+  <section class="cv__secao">
+    <h2 class="cv__rotulo">{% if lang == 'pt' %}Experiência{% else %}Experience{% endif %}</h2>
+    <div class="cv__itens">
+      {%- for e in cv.experience %}
+      {%- assign x = e[lang] %}
+      <article class="cv__item">
+        <p class="cv__periodo">{{ e.period }}</p>
+        <div>
+          <h3 class="titulo-3">{{ x.role }}</h3>
+          <p class="rotulo cv__org">{{ e.org }}</p>
+          {%- if e.note %}<p class="legenda cv__nota">{{ e.note[lang] }}</p>{% endif %}
+          <ul class="cv__lista">
+            {%- for b in x.bullets %}<li>{{ b }}</li>{% endfor %}
+          </ul>
+        </div>
+      </article>
+      {%- endfor %}
+      <p class="legenda">{{ cv.early_career[lang] }}</p>
+    </div>
+  </section>
+
+  <section class="cv__secao">
+    <h2 class="cv__rotulo">{% if lang == 'pt' %}Formação{% else %}Education{% endif %}</h2>
+    <div class="cv__itens">
+      {%- for e in cv.education %}
+      {%- assign x = e[lang] %}
+      <article class="cv__item">
+        <p class="cv__periodo">{{ e.period }}</p>
+        <div>
+          <h3 class="titulo-3">{{ x.degree }}</h3>
+          <p class="rotulo cv__org">{{ x.org }}</p>
+          <p class="corpo-sm">{{ x.detail }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="cv__secao">
+    <h2 class="cv__rotulo">{% if lang == 'pt' %}Palestras e workshops{% else %}Talks and workshops{% endif %}</h2>
+    <ul class="cv__compacta">
+      {%- for tk in site.data.talks %}
+      {%- assign tx = tk[lang] %}
+      <li><span class="cv__periodo">{{ tk.date | slice: 5, 2 }}/{{ tk.date | slice: 0, 4 }}</span> <span><b>{{ tx.title }}</b>. {{ tx.kind }}, {{ tk.event }}{% if tk.city != "" %}, {{ tk.city }}{% endif %}{% if tk.status == 'upcoming' %} ({{ site.data.ui[lang].upcoming | downcase }}){% endif %}.</span></li>
+      {%- endfor %}
+    </ul>
+  </section>
+
+  <section class="cv__secao">
+    <h2 class="cv__rotulo">{% if lang == 'pt' %}Publicações selecionadas{% else %}Selected publications{% endif %}</h2>
+    <div>
+      <ul class="cv__compacta">
+        {%- for p in pub.papers limit: 10 %}
+        <li><span class="cv__periodo">{{ p.year }}</span> <span>{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. <i>{{ p.venue }}</i>.</span></li>
+        {%- endfor %}
+      </ul>
+      <p class="legenda">{% if lang == 'pt' %}Google Scholar: {{ pub.metrics.citations }} citações, h-index {{ pub.metrics.h_index }}, i10-index {{ pub.metrics.i10_index }} (em {{ pub.metrics.as_of_pt }}). Lista completa na página <a class="ka-link" href="{{ '/pt/pesquisa/' | relative_url }}">Pesquisa</a>.{% else %}Google Scholar: {{ pub.metrics.citations }} citations, h-index {{ pub.metrics.h_index }}, i10-index {{ pub.metrics.i10_index }} (as of {{ pub.metrics.as_of_en }}). Full list on the <a class="ka-link" href="{{ '/research/' | relative_url }}">Research</a> page.{% endif %}</p>
+    </div>
+  </section>
+
+  <section class="cv__secao">
+    <h2 class="cv__rotulo">{% if lang == 'pt' %}Relatórios e patentes{% else %}Reports and patents{% endif %}</h2>
+    <ul class="cv__compacta">
+      {%- for p in pub.reports %}
+      <li><span class="cv__periodo">{{ p.year }}</span> <span>{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. <i>{{ p.venue }}</i>.</span></li>
+      {%- endfor %}
+      {%- for p in pub.patents %}
+      <li><span class="cv__periodo">{{ p.year }}</span> <span>{% if lang == 'pt' %}Patente{% else %}Patent{% endif %}: {{ p.title }}. <i>{{ p.venue }}</i>.</span></li>
+      {%- endfor %}
+    </ul>
+  </section>
+
+  <section class="cv__secao">
+    <h2 class="cv__rotulo">{% if lang == 'pt' %}Competências{% else %}Core competencies{% endif %}</h2>
+    <div>
+      <ul class="cv__lista cv__lista--colunas">
+        {%- for c in cv.competencies[lang] %}<li>{{ c }}</li>{% endfor %}
+      </ul>
+      <p class="corpo-sm"><b>{% if lang == 'pt' %}Idiomas{% else %}Languages{% endif %}:</b> {{ cv.languages[lang] }}</p>
+    </div>
+  </section>
+</div>

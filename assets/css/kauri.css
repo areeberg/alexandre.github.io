@@ -279,7 +279,52 @@ a { color: inherit; }
 [data-theme="escuro"] .linha-tempo__org { color: var(--grafite); }
 .texto-corrido p { margin: 0 0 var(--esp-16); }
 
-@media (max-width: 860px) {
+/* ---------- Currículo ---------- */
+.cv { padding-top: var(--esp-64); padding-bottom: var(--esp-96); }
+.cv__topo { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--esp-24); flex-wrap: wrap; padding-bottom: var(--esp-48); border-bottom: var(--traco-2) solid var(--tinta); }
+.cv__topo .display { margin: var(--esp-8) 0 var(--esp-12); }
+.cv__titulo { font: 600 20px/26px var(--font-sans); margin: 0 0 var(--esp-16); }
+.cv__contato { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--esp-4) var(--esp-24); font: 400 14px/20px var(--font-sans); color: var(--grafite); }
+.cv__secao { display: grid; grid-template-columns: 200px 1fr; gap: var(--esp-32); padding: var(--esp-48) 0; border-bottom: var(--traco-1) solid var(--linha-fina); }
+.cv__rotulo { font: 500 24px/28px var(--font-mao); color: var(--grafite); margin: 0; }
+.cv__resumo { margin: 0 0 var(--esp-32); max-width: 72ch; }
+.cv__destaques { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--esp-24); margin: 0; }
+.cv__destaques > div { display: flex; flex-direction: column-reverse; gap: var(--esp-4); border-top: var(--traco-1) solid var(--linha); padding-top: var(--esp-12); }
+.cv__destaques dd { margin: 0; font: 400 40px/1 var(--font-display); }
+.cv__destaques dt { font: 400 14px/20px var(--font-sans); color: var(--grafite); }
+.cv__itens { display: grid; gap: var(--esp-32); }
+.cv__item { display: grid; grid-template-columns: 120px 1fr; gap: var(--esp-24); }
+.cv__periodo { font: 600 14px/20px var(--font-sans); color: var(--grafite); margin: 0; white-space: nowrap; }
+.cv__item h3 { margin: 0; }
+.cv__org { margin: var(--esp-4) 0 var(--esp-8); color: var(--grafite); }
+.cv__nota { margin: 0 0 var(--esp-8); }
+.cv__item .corpo-sm { margin: 0; }
+.cv__lista { margin: 0; padding-left: var(--esp-16); font: 400 15px/22px var(--font-sans); }
+.cv__lista li { margin-bottom: var(--esp-4); }
+.cv__lista--colunas { columns: 2; column-gap: var(--esp-32); margin-bottom: var(--esp-16); }
+.cv__lista--colunas li { break-inside: avoid; }
+.cv__compacta { list-style: none; margin: 0 0 var(--esp-16); padding: 0; display: grid; gap: var(--esp-12); font: 400 15px/22px var(--font-sans); }
+.cv__compacta li { display: grid; grid-template-columns: 120px 1fr; gap: var(--esp-24); }
+.cv__compacta a { color: var(--tinta); text-decoration-color: var(--linha); text-underline-offset: 3px; }
+.cv__compacta i { color: var(--grafite); }
+
+@media print {
+  @page { margin: 16mm 14mm; }
+  :root { --papel: #fff; --papel-alto: #fff; --tinta: #1d1b16; --grafite: #4a453d; --linha-fina: #d9d0c0; }
+  body { background: #fff; font-size: 12px; }
+  .cabecalho, .rodape, .pular, .cv__imprimir { display: none !important; }
+  .pagina { padding: 0; max-width: none; }
+  .cv { padding: 0; }
+  .cv__topo { padding-bottom: 16px; }
+  .cv__topo .display { font-size: 36px; }
+  .cv__secao { grid-template-columns: 120px 1fr; gap: 16px; padding: 16px 0; break-inside: auto; }
+  .cv__item, .cv__compacta li { break-inside: avoid; }
+  .cv__destaques dd { font-size: 24px; }
+  .cv__lista, .cv__compacta { font-size: 12px; line-height: 17px; }
+  a { color: inherit !important; text-decoration: none !important; }
+}
+
+@media screen and (max-width: 860px) {
   .rodape .pagina { grid-template-columns: 1fr; }
   .numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .numeros dd { font-size: 44px; }
@@ -292,6 +337,10 @@ a { color: inherit; }
   .metricas dd { font-size: 44px; }
   .cabecalho { position: static; }
   .cabecalho .pagina { justify-content: flex-start; }
+  .cv__secao { grid-template-columns: 1fr; gap: var(--esp-16); padding: var(--esp-32) 0; }
+  .cv__item, .cv__compacta li { grid-template-columns: 1fr; gap: var(--esp-4); }
+  .cv__destaques { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cv__lista--colunas { columns: 1; }
   .hero__colagem:has(.retrato) { height: 320px; }
   .retrato { width: 230px; right: var(--esp-16); }
   .retrato__laje { width: 180px; height: 290px; top: 30px; }

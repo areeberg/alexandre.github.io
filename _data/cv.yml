@@ -1,0 +1,202 @@
+# Currículo. Fontes: Google Doc "CV_new", perfil do LinkedIn, ORCID e o conteúdo do site.
+# Publicações, patentes e palestras vêm de publications.yml e talks.yml.
+headline:
+  en: AI Corporate Manager · AI governance and applied research
+  pt: Gerente Corporativo de IA · governança de IA e pesquisa aplicada
+location:
+  en: Florianópolis, Brazil
+  pt: Florianópolis, Brasil
+
+summary:
+  en: >-
+    PhD in Artificial Intelligence who translates cutting-edge AI into tangible solutions for industrial and
+    corporate challenges, with a focus on trustworthy systems. As AI Corporate Manager at Starian and former
+    Head of AI at Fundação CERTI, I lead AI governance, regulatory compliance and the maturity of AI-based
+    products. As a GPAI AI Expert, I bridge deep technical research and international policy. I have led
+    international research collaborations, secured funding for high-impact projects (R$ 40M+ in R&D across
+    20+ companies) and advised leadership on the strategic application and risks of emerging technologies.
+    My postdoctoral research at UFSC characterises the AI lifecycle on the Technology Readiness Level scale.
+  pt: >-
+    Doutor em Inteligência Artificial que transforma IA de ponta em soluções concretas para desafios
+    industriais e corporativos, com foco em sistemas confiáveis. Como Gerente Corporativo de IA na Starian e
+    ex-head de IA na Fundação CERTI, lidero governança de IA, conformidade regulatória e a maturidade de
+    produtos com IA. Como especialista em IA do GPAI, faço a ponte entre pesquisa técnica e política
+    internacional. Liderei colaborações internacionais de pesquisa, captei recursos para projetos de alto
+    impacto (mais de R$ 40 milhões em P&D, em mais de 20 empresas) e assessorei lideranças sobre o uso
+    estratégico e os riscos de tecnologias emergentes. No pós-doutorado na UFSC, caracterizo o ciclo de vida
+    da IA na escala de Technology Readiness Level.
+
+highlights:
+  - { value: "20+", en: companies served, pt: empresas atendidas }
+  - { value: "R$ 40M+", en: in R&D projects delivered, pt: em projetos de P&D executados }
+  - { value: "3", en: patent families filed and granted, pt: famílias de patentes depositadas e concedidas }
+  - { value: "5", en: cybersecurity products validated by AV-TEST, pt: produtos de cibersegurança validados pelo AV-TEST }
+
+experience:
+  - org: Starian
+    period: 2026 –
+    en:
+      role: AI Corporate Manager
+      bullets:
+        - Defines and implements the corporate AI governance framework across the AI lifecycle, aligned with regulations such as the EU AI Act.
+        - Drives AI literacy across the organisation and raises the maturity of AI-based solutions in the products.
+        - Accelerates software development with AI tooling, copilots and automation, supporting squads in development, testing and technical support.
+    pt:
+      role: Gerente Corporativo de IA
+      bullets:
+        - Define e implementa o framework corporativo de governança de IA ao longo do ciclo de vida, alinhado a regulações como o EU AI Act.
+        - Promove o letramento em IA na organização e eleva a maturidade das soluções com IA nos produtos.
+        - Acelera o desenvolvimento de software com ferramentas de IA, copilots e automação, apoiando squads em desenvolvimento, testes e suporte técnico.
+  - org: ARM Consulting
+    period: 2026 –
+    en:
+      role: Founder and AI Consultant
+      bullets:
+        - "AI strategy and roadmaps, AI governance, AI team building, R&D project writing (FINEP, Lei da Informática, Lei do Bem), AI as a Service, matchmaking with research institutes and scientific consulting."
+        - "Clients include Fundação CERTI (R&D project writing, scientific guidance and AI team hiring), OAB Subseção Juína and the startups Dokbot, AprovaAI and IANA Tecnologia."
+    pt:
+      role: Fundador e consultor de IA
+      bullets:
+        - "Estratégia e roadmap de IA, governança de IA, criação de times de IA, escrita de projetos de P&D (FINEP, Lei da Informática, Lei do Bem), AI as a Service, matchmaking com ICTs e consultoria científica."
+        - "Clientes incluem a Fundação CERTI (escrita de projeto de P&D, orientação científica e contratação do time de IA), a OAB Subseção Juína e as startups Dokbot, AprovaAI e IANA Tecnologia."
+  - org: Fundação CERTI
+    period: 2023 – 2026
+    note:
+      en: "Brazilian private, non-profit R&D institution founded in 1984, with sites in Florianópolis, Manaus and Brasília."
+      pt: "Instituição privada brasileira de P&D, sem fins lucrativos, fundada em 1984, com unidades em Florianópolis, Manaus e Brasília."
+    en:
+      role: Head of AI
+      bullets:
+        - Developed and implemented the strategic vision and roadmap for AI and data governance, aligned with the foundation's goals.
+        - Designed and directed the end-to-end lifecycle of AI research projects, from needs identification and goal setting to planning and execution.
+        - Managed a cross-functional, multi-site team of researchers and engineers in Florianópolis and Manaus, including recruitment, mentoring and development plans.
+        - Defined and executed team OKRs and individual development plans aligned with organisational goals and project timelines.
+        - Built coalitions between government, academia and industry from several countries to advance responsible AI and secure funding for projects with societal impact.
+        - Led the team's intellectual property strategy, responsible for scientific publications and patent filings.
+        - Communicated research results to funders, executive leadership and the media.
+    pt:
+      role: Head de IA
+      bullets:
+        - Desenvolveu e implementou a visão estratégica e o roadmap de IA e governança de dados, alinhados aos objetivos da fundação.
+        - Desenhou e conduziu o ciclo de vida completo de projetos de pesquisa em IA, da identificação de necessidades e metas ao planejamento e execução.
+        - Gerenciou um time multidisciplinar de pesquisadores e engenheiros em Florianópolis e Manaus, incluindo recrutamento, mentoria e planos de desenvolvimento.
+        - Definiu e executou OKRs do time e PDIs alinhados aos objetivos da organização e aos cronogramas dos projetos.
+        - Articulou coalizões entre governo, academia e indústria de vários países para avançar a IA responsável e captar recursos para projetos de impacto social.
+        - Liderou a estratégia de propriedade intelectual do time, com responsabilidade por publicações científicas e depósitos de patentes.
+        - Comunicou resultados de pesquisa a financiadores, alta liderança e imprensa.
+  - org: GPAI, Global Partnership on AI
+    period: 2021, 2024 – 2025
+    en:
+      role: AI Expert
+      bullets:
+        - "Data Governance working group, SAFE project: Technical Trustworthiness and Data Governance Assurance of Models (2024–2025)."
+        - "Future of Work working group: global catalogue of real use cases of AI at work (2021)."
+    pt:
+      role: Especialista em IA
+      bullets:
+        - "Grupo de Data Governance, projeto SAFE: Technical Trustworthiness and Data Governance Assurance of Models (2024–2025)."
+        - "Grupo Future of Work: catálogo global de casos reais de uso de IA no trabalho (2021)."
+  - org: PSafe
+    period: 2021 – 2023
+    en:
+      role: Senior Data Scientist
+      bullets:
+        - Architected and deployed AI-powered cybersecurity solutions, using NLP for phishing detection and machine learning for large-scale malware analysis.
+        - Developed a computer vision system for automated logo verification to prevent brand impersonation and spoofing.
+        - Implemented concept-drift monitoring for production models to trigger timely retraining and keep detection accuracy high.
+        - Used explainable AI (XAI) to interpret model decisions, leading to the identification of new malware families and threat vectors.
+    pt:
+      role: Cientista de dados sênior
+      bullets:
+        - Arquitetou e colocou em produção soluções de cibersegurança com IA, usando NLP para detecção de phishing e machine learning para análise de malware em larga escala.
+        - Desenvolveu um sistema de visão computacional para verificação automática de logotipos, contra falsificação de marca e spoofing.
+        - Implementou monitoramento de concept drift em modelos de produção para disparar retreinamentos e manter a acurácia de detecção.
+        - Usou IA explicável (XAI) para interpretar as decisões dos modelos, levando à identificação de novas famílias de malware e vetores de ameaça.
+  - org: Instituto SENAI de Inovação em Sistemas Embarcados
+    period: 2019 – 2021
+    en:
+      role: Research Lead, Computer Vision and Machine Learning
+      bullets:
+        - Led the computer vision and machine learning areas, coordinating researchers on innovation projects for industry with a focus on embedded systems.
+        - Defined project requirements, aligned technical solutions with project constraints and prospected new AI projects with clients.
+    pt:
+      role: Líder de pesquisa em visão computacional e machine learning
+      bullets:
+        - Liderou as áreas de visão computacional e machine learning, coordenando pesquisadores em projetos de inovação para a indústria com foco em sistemas embarcados.
+        - Definiu requisitos de projeto, alinhou soluções técnicas às restrições dos projetos e prospectou novos projetos de IA com clientes.
+  - org: RideMetry Technologies, Montreal
+    period: "2018"
+    en:
+      role: Researcher
+      bullets:
+        - Developed a machine learning solution for a motorcycle safety application.
+    pt:
+      role: Pesquisador
+      bullets:
+        - Desenvolveu uma solução de machine learning para uma aplicação de segurança de motocicletas.
+
+early_career:
+  en: "Earlier: trainee at ExxonMobil (2012) and engineering intern at Electrolux (2010–2011)."
+  pt: "Antes: trainee na ExxonMobil (2012) e estagiário de engenharia na Electrolux (2010–2011)."
+
+education:
+  - period: 2025 – 2026
+    en:
+      degree: Postdoctoral research, Graduate Program in Information Science
+      org: Federal University of Santa Catarina (UFSC), in partnership with Halmstad University
+      detail: "Research theme: Lifecycle and Technology Readiness Level for Artificial Intelligence."
+    pt:
+      degree: Pós-doutorado, Programa de Pós-Graduação em Ciência da Informação
+      org: Universidade Federal de Santa Catarina (UFSC), em parceria com a Halmstad University
+      detail: "Tema: ciclo de vida e Technology Readiness Level para Inteligência Artificial."
+  - period: 2015 – 2019
+    en:
+      degree: PhD, Graduate Program in Automation and Systems Engineering
+      org: Federal University of Santa Catarina (UFSC)
+      detail: "Thesis: Contributions to Support Vector Machine. Doctoral exchange at École de technologie supérieure (ÉTS), Montreal, through the Emerging Leaders in the Americas Program (ELAP), 2017–2018."
+    pt:
+      degree: Doutorado, Programa de Pós-Graduação em Engenharia de Automação e Sistemas
+      org: Universidade Federal de Santa Catarina (UFSC)
+      detail: "Tese: Contribuições para Support Vector Machine. Doutorado sanduíche na École de technologie supérieure (ÉTS), Montreal, pelo Emerging Leaders in the Americas Program (ELAP), 2017–2018."
+  - period: 2013 – 2015
+    en:
+      degree: MSc, Graduate Program in Automation and Systems Engineering
+      org: Federal University of Santa Catarina (UFSC)
+      detail: "Dissertation: Visual Inspection System to Printed Circuit Board to Small Series Production Line in a Multiagent Context."
+    pt:
+      degree: Mestrado, Programa de Pós-Graduação em Engenharia de Automação e Sistemas
+      org: Universidade Federal de Santa Catarina (UFSC)
+      detail: "Dissertação: sistema de inspeção visual de placas de circuito impresso para linhas de produção de pequenas séries em um contexto multiagente."
+  - period: 2007 – 2012
+    en:
+      degree: BSc in Control and Automation Engineering
+      org: Pontifical Catholic University of Paraná (PUCPR)
+      detail: "Exchange year in Electrical Engineering at Wright State University, USA (2009–2010)."
+    pt:
+      degree: Graduação em Engenharia de Controle e Automação
+      org: Pontifícia Universidade Católica do Paraná (PUCPR)
+      detail: "Intercâmbio em Engenharia Elétrica na Wright State University, EUA (2009–2010)."
+
+competencies:
+  en:
+    - AI governance and international AI policy, ethics and responsible innovation
+    - AI lifecycle, Technology Readiness Level and MLOps maturity
+    - Strategic leadership, OKRs and stakeholder engagement
+    - R&D programme management, funding and intellectual property
+    - Machine learning, computer vision, NLP and generative AI
+    - AI for cybersecurity, explainable AI and concept drift
+    - "Applied AI for global challenges, including the Sustainable Development Goals in the Amazon"
+    - Technical diplomacy and science communication
+  pt:
+    - Governança de IA e política internacional de IA, ética e inovação responsável
+    - Ciclo de vida da IA, Technology Readiness Level e maturidade de MLOps
+    - Liderança estratégica, OKRs e relacionamento com stakeholders
+    - Gestão de programas de P&D, captação de recursos e propriedade intelectual
+    - Machine learning, visão computacional, NLP e IA generativa
+    - IA para cibersegurança, IA explicável e concept drift
+    - "IA aplicada a desafios globais, incluindo os Objetivos de Desenvolvimento Sustentável na Amazônia"
+    - Diplomacia técnica e comunicação científica
+
+languages:
+  en: "Portuguese (native), English (fluent), Spanish (professional), French (elementary)"
+  pt: "Português (nativo), inglês (fluente), espanhol (profissional), francês (básico)"
