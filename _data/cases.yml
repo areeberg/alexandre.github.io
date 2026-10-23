@@ -5,20 +5,22 @@ cases:
     kind: { en: Consulting, pt: Consultoria }
     url: https://certi.org.br/inteligencia-artificial/
     en:
-      challenge: Structure a new AI R&D project and build the team to deliver it.
-      done: "R&D project writing, scientific guidance on methods and the AI lifecycle, and technical assessments and interviews to hire data engineers and AI developers."
+      challenge: Build an AI team and bring scientific rigour to its AI projects.
+      done: "Support in forming the AI team, with technical assessments and interviews for data engineers and AI developers, plus scientific guidance and guidance on the AI projects and their lifecycle."
     pt:
-      challenge: Estruturar um novo projeto de P&D em IA e formar o time para executá-lo.
-      done: "Escrita do projeto de P&D, orientação científica sobre métodos e ciclo de vida da IA, e avaliações técnicas e entrevistas para contratar engenheiros de dados e desenvolvedores de IA."
+      challenge: Formar um time de IA e dar rigor científico aos seus projetos de IA.
+      done: "Apoio na formação do time de IA, com avaliações técnicas e entrevistas de engenheiros de dados e desenvolvedores de IA, além de orientação científica e orientação dos projetos de IA ao longo do ciclo de vida."
   - org: OAB Subseção Juína
     kind: { en: Workshop, pt: Workshop }
     url: ""
     en:
       challenge: Prepare local lawyers to use AI in their daily work safely and within professional rules.
       done: "Hands-on workshop \"AI in legal work\": contracts, case-file chronologies, devil's-advocate review of briefs, citation checking, ethics and LGPD."
+      result: 40 lawyers took part in the workshop.
     pt:
       challenge: Preparar a advocacia local para usar IA no dia a dia com segurança e dentro das regras da profissão.
       done: "Workshop prático \"IA no trabalho jurídico\": contratos, cronologia de acervo, advogado do diabo da própria peça, checagem de citações, ética e LGPD."
+      result: 40 advogados participaram do workshop.
 
 startups:
   - { name: Dokbot, url: "https://www.dokbot.ai/" }

@@ -59,7 +59,9 @@
       }{% if page.ref == 'home' or page.ref == 'consulting' %},
       {
         "@type": "ProfessionalService",
-        "name": "ARM Consulting",
+        "name": "{{ l.company.name }}",
+        "legalName": "{{ l.company.legal_name }}",
+        "taxID": "{{ l.company.cnpj }}",
         "description": "{% if lang == 'pt' %}Consultoria em Inteligência Artificial: governança de IA, projetos de P&D financiados e head de IA sob demanda.{% else %}Artificial Intelligence consulting: AI governance, funded R&D projects and fractional Head of AI.{% endif %}",
         "url": "{{ page.url | absolute_url }}",
         "email": "mailto:{{ l.email }}",
