@@ -231,6 +231,7 @@ a { color: inherit; }
 .palestra__corpo h3 { margin: var(--esp-12) 0 var(--esp-8); }
 .palestra__corpo p { margin: 0; color: var(--grafite); max-width: 70ch; }
 .palestra__corpo .tags { align-items: center; }
+.palestra__corpo p.palestra__video { margin-top: var(--esp-12); }
 .palestra__modulos { margin: var(--esp-16) 0 0; padding-left: var(--esp-24); columns: 2; column-gap: var(--esp-32); font: 400 14px/20px var(--font-sans); }
 .palestra__modulos li { margin-bottom: var(--esp-8); break-inside: avoid; }
 

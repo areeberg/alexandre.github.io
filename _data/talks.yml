@@ -1,6 +1,6 @@
 # Palestras, workshops e treinamentos, do mais recente para o mais antigo.
 # date: AAAA-MM (deixe vazio se ainda não souber). status: upcoming | delivered.
-# Itens com "# CONFIRMAR" ainda precisam de dado real.
+# video: link opcional para a gravação.
 - id: dss-curitiba-2026
   status: upcoming
   date: 2026-10
@@ -49,12 +49,12 @@
   city: Florianópolis, SC
   en:
     kind: Talk
-    title: ""   # CONFIRMAR: título da palestra (o deck está no SharePoint da Starian)
-    text: ""
+    title: Corporate AI Governance
+    text: Efficiency, quality and traceability of AI in products.
   pt:
     kind: Palestra
-    title: ""
-    text: ""
+    title: Governança de IA corporativa
+    text: Eficiência, qualidade e rastreabilidade de IA nos produtos.
 - id: seminfo-ufsc-2026
   status: delivered
   date: 2026-08
@@ -70,9 +70,10 @@
     text: Os princípios que tornam o aprendizado de máquina possível, para os estudantes da primeira Semana Acadêmica de Ciência da Informação da UFSC.
 - id: tdc-florianopolis-2026
   status: delivered
-  date: ""   # CONFIRMAR: mês da edição de Florianópolis
+  date: 2026-07   # 22/07/2026
   event: TDC Florianópolis 2026
   city: Florianópolis, SC
+  video: https://youtu.be/QW8w2_HsSWw?t=28821
   en:
     kind: Talk
     title: "Strategic AI Management: from Plan to Results with People and GenAI"
@@ -81,16 +82,3 @@
     kind: Palestra
     title: "Gestão Estratégica de IA: do Plano aos Resultados com Pessoas e GenAI"
     text: "Como estruturar e operacionalizar um plano estratégico de IA alinhado aos objetivos da empresa. Um fluxo completo e replicável: do plano macro de IA aos OKRs de time e individuais, refinados com a equipe, passando por análise SWOT pessoal, PDIs conectados às metas e acompanhamento via 1:1s com suporte de agentes de IA, com Skills de IA acelerando cada etapa. Ao final, um repositório público com todos os exemplos e Skills para aplicar diretamente na sua equipe."
-- id: engie-fundamentos-ia
-  status: delivered
-  date: ""   # CONFIRMAR: mês e ano do treinamento
-  event: Engie
-  city: ""
-  en:
-    kind: Training
-    title: AI fundamentals
-    text: An in-company training on the fundamentals of artificial intelligence for Engie teams.
-  pt:
-    kind: Treinamento
-    title: Fundamentos da IA
-    text: Treinamento in company sobre os fundamentos da inteligência artificial para equipes da Engie.

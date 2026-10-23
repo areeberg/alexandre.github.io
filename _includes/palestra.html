@@ -31,6 +31,9 @@
     {%- if tk.city != "" %}<p class="legenda">{{ tk.city }}</p>{% endif %}
     {%- endif %}
     {%- if tx.text != "" %}<p>{{ tx.text }}</p>{% endif %}
+    {%- if tk.video %}
+    <p class="palestra__video"><a class="ka-link" href="{{ tk.video }}" target="_blank" rel="noopener">{% if include.lang == 'pt' %}Assistir à gravação{% else %}Watch the recording{% endif %}</a></p>
+    {%- endif %}
     {%- if tx.modules and include.full %}
     <ol class="palestra__modulos">
       {%- for m in tx.modules %}<li>{{ m }}</li>{% endfor %}
