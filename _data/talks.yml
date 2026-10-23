@@ -15,8 +15,8 @@
 - id: workshop-ia-juridico
   status: delivered
   date: 2026-10
-  event: ""   # CONFIRMAR: evento ou cliente onde o workshop foi dado
-  city: ""
+  event: OAB Subseção Juína
+  city: Juína, MT
   featured: true
   en:
     kind: Workshop

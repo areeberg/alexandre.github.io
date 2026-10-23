@@ -201,6 +201,13 @@ a { color: inherit; }
 .hero__texto .ka-botao { margin: 0 var(--esp-8) var(--esp-8) 0; }
 .hero--curto { padding-bottom: var(--esp-64); }
 .hero__colagem--baixa { height: 300px; }
+/* Retrato: na colagem vira fotocópia (cinza, contraste alto); na página Sobre fica em cor. */
+.retrato { position: absolute; top: 0; right: var(--esp-24); width: 280px; margin: 0; background: var(--xerox); border: var(--traco-1) solid var(--xerox); }
+.retrato img { width: 100%; height: auto; filter: grayscale(1) contrast(1.15); }
+.hero__oval--retrato { top: auto; bottom: 8px; right: -8px; width: 112px; height: 84px; }
+.hero__cera--retrato { bottom: -24px; right: 232px; width: 120px; height: 120px; }
+.retrato-sobre { margin: var(--esp-32) 0 0; max-width: 320px; border: var(--traco-1) solid var(--linha-fina); background: var(--papel-alto); padding: var(--esp-12) var(--esp-12) var(--esp-24); transform: rotate(var(--inclinacao-1)); }
+.retrato-sobre img { width: 100%; height: auto; }
 .selo { position: absolute; left: 8%; top: 24px; width: 120px; height: 120px; border-radius: var(--raio-oval); background: var(--amarelo-cera); color: var(--on-cera); transform: rotate(var(--inclinacao-3)); display: flex; flex-direction: column; align-items: center; justify-content: center; font: 600 12px/16px var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; text-align: center; border: var(--traco-2) solid var(--xerox); }
 .selo span:first-child { font: 400 32px/1 var(--font-display); letter-spacing: 0; text-transform: none; }
 
@@ -239,10 +246,10 @@ a { color: inherit; }
 .lista-marcada li { padding-left: var(--esp-24); position: relative; }
 .lista-marcada li::before { content: ""; position: absolute; left: 0; top: 9px; width: 10px; height: 7px; border-radius: var(--raio-oval); background: var(--buzio); }
 
-.casos { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--esp-24); }
+.casos { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--esp-24); }
 .caso { padding: var(--esp-24); border: var(--traco-1) solid var(--linha-fina); background: var(--papel-alto); display: flex; flex-direction: column; gap: var(--esp-8); }
 .caso p { margin: 0; }
-.caso--destaque { grid-row: span 1; background: var(--papel-alto); }
+.caso--destaque { grid-row: span 2; background: var(--papel-alto); }
 .caso--destaque p:not(.rotulo) { color: var(--grafite); }
 .chamada { display: flex; flex-direction: column; align-items: flex-start; gap: var(--esp-24); max-width: 760px; }
 
@@ -284,6 +291,11 @@ a { color: inherit; }
   .metricas dd { font-size: 44px; }
   .marca span { display: none; }
   .cabecalho { position: static; }
+  .hero__colagem:has(.retrato) { height: 300px; }
+  .retrato { width: 210px; right: var(--esp-16); }
+  .hero__oval--retrato { width: 84px; height: 64px; right: 0; }
+  .hero__cera--retrato { width: 88px; height: 88px; right: 180px; bottom: -8px; }
+  .retrato-sobre { max-width: 260px; }
   .pagina { padding: 0 var(--esp-16); }
   .display-xl { font-size: 64px; }
   .display { font-size: 40px; }

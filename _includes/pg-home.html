@@ -21,11 +21,13 @@
       <a class="ka-botao ka-botao--fantasma" href="{{ p_res.url | relative_url }}">See the research</a>
       {% endif %}
     </div>
-    <div class="hero__colagem" aria-hidden="true">
-      <div class="hero__laje"></div>
-      <div class="hero__oval"></div>
-      <div class="hero__cera ka-estampa-cera"></div>
-      <div class="selo"><span>PhD</span><span>GPAI</span><span>AI Expert</span></div>
+    <div class="hero__colagem">
+      <figure class="retrato">
+        <img src="{{ '/assets/img/alexandre.webp' | relative_url }}" alt="Alexandre Reeberg de Mello" width="692" height="854">
+      </figure>
+      <div class="hero__oval hero__oval--retrato" aria-hidden="true"></div>
+      <div class="hero__cera hero__cera--retrato ka-estampa-cera" aria-hidden="true"></div>
+      <div class="selo" aria-hidden="true"><span>PhD</span><span>GPAI</span><span>AI Expert</span></div>
     </div>
   </section>
 </div>
