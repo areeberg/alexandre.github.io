@@ -2,7 +2,7 @@
 # date: AAAA-MM (deixe vazio se ainda não souber). status: upcoming | delivered.
 # video: link opcional para a gravação.
 - id: dss-curitiba-2026
-  status: upcoming
+  status: delivered
   date: 2026-10
   event: Data Science Summit 2026
   city: Curitiba, PR
