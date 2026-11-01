@@ -1,0 +1,47 @@
+{%- comment -%} Vídeo do YouTube com capa local; o player só carrega no clique. Parâmetros: include.video, include.lang, include.compacto {%- endcomment -%}
+{%- assign v = include.video -%}
+{%- assign vx = v[include.lang] -%}
+<article class="video{% if include.compacto %} video--compacto{% endif %}">
+  <div class="video__player" data-yt="{{ v.youtube }}" data-legenda="{% if include.lang == 'en' %}en{% endif %}">
+    <button class="video__capa" type="button" aria-label="{% if include.lang == 'pt' %}Assistir{% else %}Play{% endif %}: {{ vx.title }} ({{ v.duration }})">
+      <img src="{{ v.poster | relative_url }}" alt="" width="1280" height="720" loading="lazy">
+      <span class="video__play" aria-hidden="true"></span>
+      <span class="video__duracao">{{ v.duration }}</span>
+    </button>
+  </div>
+  <div class="video__texto">
+    <h3 class="titulo-2">{{ vx.title }}</h3>
+    <p>{{ vx.summary }}</p>
+    {%- unless include.compacto %}
+    <ul class="lista-marcada">
+      {%- for t in vx.takeaways %}<li>{{ t }}</li>{% endfor %}
+    </ul>
+    {%- endunless %}
+    <p class="legenda video__nota">{% if include.lang == 'pt' %}Narração em português. Apresentadora e voz geradas por IA.{% else %}Narrated in Portuguese, with English subtitles. Presenter and voice generated with AI.{% endif %} <a class="ka-link" href="https://youtu.be/{{ v.youtube }}" target="_blank" rel="noopener">{% if include.lang == 'pt' %}Ver no YouTube{% else %}Watch on YouTube{% endif %}</a></p>
+    <details class="video__transcricao">
+      <summary>{% if include.lang == 'pt' %}Ler a transcrição{% else %}Read the transcript{% endif %}</summary>
+      <p>{{ vx.transcript }}</p>
+    </details>
+  </div>
+</article>
+<script>
+  if (!window.__kaVideo) {
+    window.__kaVideo = true;
+    document.addEventListener('click', function (ev) {
+      var capa = ev.target.closest && ev.target.closest('.video__capa');
+      if (!capa) return;
+      var player = capa.parentNode;
+      var id = player.getAttribute('data-yt');
+      var leg = player.getAttribute('data-legenda');
+      var src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1' + (leg ? '&cc_load_policy=1&cc_lang_pref=' + leg + '&hl=' + leg : '');
+      var f = document.createElement('iframe');
+      f.src = src;
+      f.title = capa.getAttribute('aria-label');
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen = true;
+      player.innerHTML = '';
+      player.appendChild(f);
+      f.focus();
+    });
+  }
+</script>

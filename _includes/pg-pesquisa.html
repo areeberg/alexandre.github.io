@@ -27,6 +27,24 @@
   </section>
 </div>
 
+{%- assign vids = site.data.videos | where: "show", true %}
+{%- if vids.size > 0 %}
+<div class="pagina">
+  <section class="secao videos" id="videos" style="padding-top: 0">
+    <div class="cabeca-secao">
+      <p class="anotacao">{% if lang == 'pt' %}em vídeo{% else %}on video{% endif %}</p>
+      <h2 class="display">{% if lang == 'pt' %}A pesquisa em menos de 10 minutos{% else %}The research in under 10 minutes{% endif %}</h2>
+      <p class="cabeca-secao__texto">{% if lang == 'pt' %}Dois vídeos curtos explicam a pesquisa de pós-doutorado: por que tantos projetos de IA param depois da prova de conceito e como decidir, com evidências, quando um sistema está pronto para avançar.{% else %}Two short videos explain the postdoctoral research: why so many AI projects stall after the proof of concept, and how to decide, with evidence, when a system is ready to move forward.{% endif %}</p>
+    </div>
+    <div class="lista-videos">
+      {%- for v in vids reversed %}
+      {% include video.html video=v lang=lang %}
+      {%- endfor %}
+    </div>
+  </section>
+</div>
+{%- endif %}
+
 <section class="faixa">
   <div class="pagina">
     <div class="cabeca-secao">

@@ -99,6 +99,14 @@
       <li><b>Alongside the NIST AI RMF.</b> The RMF guides high-level governance; the method turns it into decision criteria for the teams.</li>
       {% endif %}
     </ul>
+
+    {%- assign vid = site.data.videos | where: "id", "ifaislm" | where: "show", true | first %}
+    {%- if vid %}
+    <div class="metodo__video">
+      <p class="rotulo">{% if lang == 'pt' %}O método explicado em 7 minutos{% else %}The method explained in 7 minutes{% endif %}</p>
+      {% include video.html video=vid lang=lang compacto=true %}
+    </div>
+    {%- endif %}
   </section>
 
   <section class="secao" style="padding-top: 0">
