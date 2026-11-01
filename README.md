@@ -30,6 +30,7 @@ Quase todo o texto fica em arquivos YAML em `_data/`, com os campos `en` e `pt` 
 | `_data/cases.yml` | Casos de clientes (desafio, o que foi feito e, opcionais, `result` e `quote` com depoimento) e startups apoiadas |
 | `_data/faq.yml` | Perguntas frequentes da página de consultoria |
 | `_data/talks.yml` | Palestras e workshops. `date` no formato `AAAA-MM`, `status` (`upcoming` ou `delivered`) e `video` opcional |
+| `_data/videos.yml` | Vídeos explicativos da pesquisa no YouTube (ID, capa, duração, título, resumo, pontos-chave e transcrição). `show: false` esconde um vídeo |
 | `_data/publications.yml` | Métricas do Google Scholar (atualizar à mão), artigos, relatórios e patentes |
 | `_data/cv.yml` | Currículo: resumo, destaques, experiência com tópicos, formação, competências e idiomas |
 | `_data/experience.yml` e `_data/education.yml` | Linha do tempo resumida da página Sobre |
