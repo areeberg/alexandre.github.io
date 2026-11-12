@@ -6,6 +6,7 @@
   date: 2026-11   # 10/11/2026, online, no YouTube da LIA
   event: LIA · Ciclo de Palestras
   city: Online
+  video: https://youtu.be/YzvikhO_RUk
   en:
     kind: Talk
     title: "Thinking AI: a geometric intuition of learning"
