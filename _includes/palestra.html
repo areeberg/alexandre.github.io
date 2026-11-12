@@ -34,6 +34,9 @@
     {%- if tk.video %}
     <p class="palestra__video"><a class="ka-link" href="{{ tk.video }}" target="_blank" rel="noopener">{% if include.lang == 'pt' %}Assistir à gravação{% else %}Watch the recording{% endif %}</a></p>
     {%- endif %}
+    {%- if tk.photo and include.full %}
+    <figure class="palestra__foto ka-grade"><img src="{{ tk.photo | relative_url }}" alt="{{ tk.photo_alt[include.lang] }}" width="1400" height="935" loading="lazy"></figure>
+    {%- endif %}
     {%- if tx.modules and include.full %}
     <ol class="palestra__modulos">
       {%- for m in tx.modules %}<li>{{ m }}</li>{% endfor %}

@@ -1,11 +1,28 @@
 # Palestras, workshops e treinamentos, do mais recente para o mais antigo.
 # date: AAAA-MM (deixe vazio se ainda não souber). status: upcoming | delivered.
-# video: link opcional para a gravação.
+# video: link opcional para a gravação. photo: foto opcional (aparece na página de palestras), com photo_alt.
+- id: lia-thinking-ai-2026
+  status: delivered
+  date: 2026-11   # 10/11/2026, online, no YouTube da LIA
+  event: LIA · Ciclo de Palestras
+  city: Online
+  en:
+    kind: Talk
+    title: "Thinking AI: a geometric intuition of learning"
+    text: "What it means for a model to learn, seen as geometry: data as points in space, learning as finding the shape that separates and represents them, and why that intuition helps to read what AI models can and cannot do."
+  pt:
+    kind: Palestra
+    title: "Thinking AI: uma intuição geométrica do aprendizado"
+    text: "O que significa um modelo aprender, visto como geometria: dados como pontos no espaço, aprendizado como encontrar a forma que os separa e representa, e por que essa intuição ajuda a entender o que os modelos de IA conseguem e não conseguem fazer."
 - id: dss-curitiba-2026
   status: delivered
   date: 2026-10
   event: Data Science Summit 2026
   city: Curitiba, PR
+  photo: /assets/img/palestra-dss-2026.webp
+  photo_alt:
+    en: Alexandre presenting at Data Science Summit 2026 in Curitiba
+    pt: Alexandre apresentando no Data Science Summit 2026, em Curitiba
   en:
     kind: Talk
     title: "Corporate Governance: a method to operationalise the NIST AI RMF in AI stage-gate decisions"
